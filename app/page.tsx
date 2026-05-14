@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
+import CtaSection from "@/components/sections/CtaSection";
+import FeatureDetailGrid from "@/components/sections/FeatureDetailGrid";
+import FeatureShowcase from "@/components/sections/FeatureShowcase";
 import {
   caseStudies,
   flowSteps,
@@ -99,7 +102,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-slate-50 px-5 py-20">
+      <FeatureShowcase />
+
+      <FeatureDetailGrid />
+
+      <section className="px-5 py-20">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
             Service
@@ -123,7 +130,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 py-20">
+      <section className="bg-slate-50 px-5 py-20">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
             Reasons
@@ -150,7 +157,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-slate-50 px-5 py-20">
+      <section className="px-5 py-20">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
             Cases
@@ -176,7 +183,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 py-20">
+      <section className="bg-slate-50 px-5 py-20">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
             Flow
@@ -187,7 +194,7 @@ export default function Home() {
 
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {flowSteps.slice(0, 4).map((step) => (
-              <article key={step.step} className="rounded-2xl border border-slate-200 p-6">
+              <article key={step.step} className="rounded-2xl border border-slate-200 bg-white p-6">
                 <p className="font-bold text-blue-700">STEP {step.step}</p>
                 <h3 className="mt-3 text-lg font-bold text-slate-950">{step.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-slate-600">{step.description}</p>
@@ -201,22 +208,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-blue-700 px-5 py-20 text-white">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-            まずは現場の運用を一緒に整理しませんか？
-          </h2>
-          <p className="mt-6 leading-8 text-blue-100">
-            導入を決めていない段階でも大丈夫です。現在の課題を伺いながら、無理のない進め方をご提案します。
-          </p>
-          <Link
-            href="/contact"
-            className="mt-10 inline-block rounded-full bg-white px-8 py-4 font-bold text-blue-700 transition hover:bg-blue-50"
-          >
-            無料で相談する
-          </Link>
-        </div>
-      </section>
+      <CtaSection />
 
       <Footer />
     </main>
