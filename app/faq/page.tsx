@@ -7,7 +7,7 @@ import { faqItems } from "@/lib/siteContent";
 export const metadata: Metadata = {
   title: "よくある質問",
   description:
-    "TOACHの料金、導入方法、スマホ利用、サポート体制など、よくある質問をまとめました。",
+    "TOACHの料金、導入方法、スマートフォン利用、サポート体制など、よくある質問をまとめました。",
 };
 
 export default function FaqPage() {

@@ -7,7 +7,7 @@ import { flowSteps } from "@/lib/siteContent";
 export const metadata: Metadata = {
   title: "ご利用の流れ",
   description:
-    "TOACHの問い合わせから導入、運用開始までの流れを分かりやすく紹介します。",
+    "TOACHのお問い合わせから導入、運用開始までの流れを分かりやすく紹介します。",
 };
 
 export default function FlowPage() {
@@ -17,7 +17,7 @@ export default function FlowPage() {
       <PageLead
         eyebrow="Flow"
         title="ご利用の流れ"
-        description="初めての方でも安心して進められるよう、導入前の相談から運用開始後までサポートします。"
+        description="初めての方でも安心して進められるよう、導入前の相談から初期設定、操作説明、運用開始後の改善までサポートします。"
       />
 
       <section className="px-5 py-20">
@@ -25,11 +25,13 @@ export default function FlowPage() {
           {flowSteps.map((step) => (
             <article
               key={step.step}
-              className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm"
+              className="grid gap-5 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm md:grid-cols-[120px_1fr]"
             >
               <p className="font-bold text-blue-700">STEP {step.step}</p>
-              <h2 className="mt-3 text-2xl font-bold text-slate-950">{step.title}</h2>
-              <p className="mt-4 leading-8 text-slate-600">{step.description}</p>
+              <div>
+                <h2 className="text-2xl font-bold text-slate-950">{step.title}</h2>
+                <p className="mt-4 leading-8 text-slate-600">{step.description}</p>
+              </div>
             </article>
           ))}
         </div>

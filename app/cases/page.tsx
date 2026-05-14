@@ -17,7 +17,7 @@ export default function CasesPage() {
       <PageLead
         eyebrow="Cases"
         title="導入事例・活用例"
-        description="実際の現場に近い活用例をもとに、TOACH導入後の変化を紹介します。"
+        description="実際の現場に近い活用例をもとに、TOACH導入後の変化を紹介します。マニュアル、タスク、教育、承認をまとめることで、確認業務の負担を減らします。"
       />
 
       <section className="px-5 py-20">

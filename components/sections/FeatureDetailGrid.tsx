@@ -14,7 +14,7 @@ export default function FeatureDetailGrid() {
             </h2>
             <p className="mt-6 leading-9 text-slate-600">
               マニュアル、タスク、承認、教育が別々になっていると、確認に時間がかかります。
-              TOACHでは、それらを一つの流れとして扱えるため、現場運用を整理しやすくなります。
+              TOACHでは、それらをひとつの流れとして扱えるため、現場運用を整理しやすくなります。
             </p>
           </div>
 
@@ -35,7 +35,7 @@ export default function FeatureDetailGrid() {
 
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-slate-950">
-            このような運用で使われます
+            このような運用で使われます。
           </h3>
 
           <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">

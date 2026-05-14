@@ -1,21 +1,15 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP } from "next/font/google";
 import { siteConfig } from "@/lib/siteContent";
 import "./globals.css";
 
-const notoSansJp = Noto_Sans_JP({
-  subsets: ["latin"],
-  display: "swap",
-});
-
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.serviceName}｜${siteConfig.tagline}`,
-    template: `%s｜${siteConfig.serviceName}`,
+    default: `${siteConfig.serviceName} | ${siteConfig.tagline}`,
+    template: `%s | ${siteConfig.serviceName}`,
   },
   description: siteConfig.description,
   openGraph: {
-    title: `${siteConfig.serviceName}｜${siteConfig.tagline}`,
+    title: `${siteConfig.serviceName} | ${siteConfig.tagline}`,
     description: siteConfig.description,
     type: "website",
     locale: "ja_JP",
@@ -30,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={notoSansJp.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

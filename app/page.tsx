@@ -14,6 +14,19 @@ import {
   siteConfig,
 } from "@/lib/siteContent";
 
+const dashboardItems = [
+  "マニュアル確認",
+  "タスク完了",
+  "承認待ち",
+  "教育進捗",
+] as const;
+
+const heroStats = [
+  { label: "今月の確認率", value: "87%" },
+  { label: "未完了タスク", value: "16件" },
+  { label: "公開マニュアル", value: "248件" },
+] as const;
+
 export default function Home() {
   return (
     <main>
@@ -29,11 +42,12 @@ export default function Home() {
             <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight text-slate-950 md:text-6xl">
               伝えた業務を、
               <br />
-              実施されるところまで。
+              実行されるところまで。
             </h1>
 
             <p className="mt-6 text-base leading-8 text-slate-600 md:text-lg md:leading-9">
               {siteConfig.description}
+              マニュアルを置くだけではなく、誰に届け、誰が確認し、どこで止まっているかまで追える運用をつくります。
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
@@ -55,10 +69,15 @@ export default function Home() {
 
           <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-xl md:p-6">
             <div className="rounded-2xl bg-slate-950 p-6 text-white">
-              <p className="text-sm font-bold text-blue-200">TOACH Dashboard</p>
+              <div className="flex items-center justify-between gap-4">
+                <p className="text-sm font-bold text-blue-200">TOACH Dashboard</p>
+                <span className="rounded-full bg-emerald-400/15 px-3 py-1 text-xs font-bold text-emerald-200">
+                  運用中
+                </span>
+              </div>
 
               <div className="mt-6 grid gap-4">
-                {["マニュアル確認", "タスク完了", "承認待ち", "教育進捗"].map((item) => (
+                {dashboardItems.map((item) => (
                   <div
                     key={item}
                     className="flex items-center justify-between rounded-xl bg-white/10 p-4"
@@ -71,9 +90,13 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="mt-6 rounded-xl bg-blue-500 p-5">
-                <p className="text-sm text-blue-100">今月の確認状況</p>
-                <p className="mt-2 text-3xl font-bold">87%</p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                {heroStats.map((stat) => (
+                  <div key={stat.label} className="rounded-xl bg-blue-500 p-4">
+                    <p className="text-xs text-blue-100">{stat.label}</p>
+                    <p className="mt-2 text-2xl font-bold">{stat.value}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -86,7 +109,7 @@ export default function Home() {
             Problem
           </p>
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
-            このようなお悩みはありませんか？
+            こんなお悩みはありませんか？
           </h2>
 
           <div className="mt-10 grid gap-5 md:grid-cols-2">

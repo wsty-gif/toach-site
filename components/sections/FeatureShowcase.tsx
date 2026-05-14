@@ -14,7 +14,7 @@ export default function FeatureShowcase() {
           </h2>
           <p className="mt-6 leading-9 text-slate-600">
             TOACHは、マニュアル管理、タスク配信、承認、ラーニングを別々に扱うのではなく、
-            現場で実施されるところまでつなげて管理します。
+            現場で実行されるところまでつなげて管理します。
           </p>
         </div>
 

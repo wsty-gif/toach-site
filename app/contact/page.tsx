@@ -65,7 +65,7 @@ export default function ContactPage() {
             </Link>
 
             <p className="mt-6 text-sm leading-7 text-blue-100">
-              通常、1〜2営業日以内に担当者よりご連絡いたします。
+              通常、2〜3営業日以内に担当者よりご連絡いたします。
             </p>
 
             <div className="mt-8 border-t border-white/20 pt-8">
