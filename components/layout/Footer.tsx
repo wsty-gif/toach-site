@@ -4,7 +4,7 @@ import { navLinks, siteConfig } from "@/lib/siteContent";
 export default function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-slate-950 text-white">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-12 md:grid-cols-[1fr_2fr]">
+      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:px-5 sm:py-12 md:grid-cols-[1fr_2fr] md:gap-10">
         <div>
           <div className="text-2xl font-bold tracking-tight">{siteConfig.serviceName}</div>
           <p className="mt-4 text-sm leading-7 text-slate-300">

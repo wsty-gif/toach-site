@@ -4,6 +4,9 @@ import Navbar from "@/components/layout/Navbar";
 import CtaSection from "@/components/sections/CtaSection";
 import FeatureDetailGrid from "@/components/sections/FeatureDetailGrid";
 import FeatureShowcase from "@/components/sections/FeatureShowcase";
+import ImprovementCycle from "@/components/sections/ImprovementCycle";
+import OperationIllustration from "@/components/sections/OperationIllustration";
+import ProductFlowIllustration from "@/components/sections/ProductFlowIllustration";
 import {
   caseStudies,
   flowSteps,
@@ -13,19 +16,6 @@ import {
   serviceItems,
   siteConfig,
 } from "@/lib/siteContent";
-
-const dashboardItems = [
-  "マニュアル確認",
-  "タスク完了",
-  "承認待ち",
-  "教育進捗",
-] as const;
-
-const heroStats = [
-  { label: "今月の確認率", value: "87%" },
-  { label: "未完了タスク", value: "16件" },
-  { label: "公開マニュアル", value: "248件" },
-] as const;
 
 export default function Home() {
   return (
@@ -42,12 +32,11 @@ export default function Home() {
             <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight text-slate-950 md:text-6xl">
               伝えた業務を、
               <br />
-              実行されるところまで。
+              実施されるところまで。
             </h1>
 
             <p className="mt-6 text-base leading-8 text-slate-600 md:text-lg md:leading-9">
               {siteConfig.description}
-              マニュアルを置くだけではなく、誰に届け、誰が確認し、どこで止まっているかまで追える運用をつくります。
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
@@ -69,15 +58,10 @@ export default function Home() {
 
           <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-xl md:p-6">
             <div className="rounded-2xl bg-slate-950 p-6 text-white">
-              <div className="flex items-center justify-between gap-4">
-                <p className="text-sm font-bold text-blue-200">TOACH Dashboard</p>
-                <span className="rounded-full bg-emerald-400/15 px-3 py-1 text-xs font-bold text-emerald-200">
-                  運用中
-                </span>
-              </div>
+              <p className="text-sm font-bold text-blue-200">TOACH Dashboard</p>
 
               <div className="mt-6 grid gap-4">
-                {dashboardItems.map((item) => (
+                {["マニュアル確認", "タスク完了", "承認待ち", "教育進捗"].map((item) => (
                   <div
                     key={item}
                     className="flex items-center justify-between rounded-xl bg-white/10 p-4"
@@ -90,13 +74,9 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="mt-6 grid gap-3 sm:grid-cols-3">
-                {heroStats.map((stat) => (
-                  <div key={stat.label} className="rounded-xl bg-blue-500 p-4">
-                    <p className="text-xs text-blue-100">{stat.label}</p>
-                    <p className="mt-2 text-2xl font-bold">{stat.value}</p>
-                  </div>
-                ))}
+              <div className="mt-6 rounded-xl bg-blue-500 p-5">
+                <p className="text-sm text-blue-100">今月の確認状況</p>
+                <p className="mt-2 text-3xl font-bold">87%</p>
               </div>
             </div>
           </div>
@@ -108,8 +88,9 @@ export default function Home() {
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
             Problem
           </p>
+
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
-            こんなお悩みはありませんか？
+            このようなお悩みはありませんか？
           </h2>
 
           <div className="mt-10 grid gap-5 md:grid-cols-2">
@@ -125,7 +106,13 @@ export default function Home() {
         </div>
       </section>
 
+      <OperationIllustration />
+
+      <ProductFlowIllustration />
+
       <FeatureShowcase />
+
+      <ImprovementCycle />
 
       <FeatureDetailGrid />
 
@@ -134,6 +121,7 @@ export default function Home() {
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
             Service
           </p>
+
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
             TOACHでできること
           </h2>
@@ -158,6 +146,7 @@ export default function Home() {
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
             Reasons
           </p>
+
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
             選ばれる理由
           </h2>
@@ -185,6 +174,7 @@ export default function Home() {
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
             Cases
           </p>
+
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
             導入事例・活用例
           </h2>
@@ -211,16 +201,24 @@ export default function Home() {
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
             Flow
           </p>
+
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
             ご利用の流れ
           </h2>
 
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {flowSteps.slice(0, 4).map((step) => (
-              <article key={step.step} className="rounded-2xl border border-slate-200 bg-white p-6">
+              <article
+                key={step.step}
+                className="rounded-2xl border border-slate-200 bg-white p-6"
+              >
                 <p className="font-bold text-blue-700">STEP {step.step}</p>
-                <h3 className="mt-3 text-lg font-bold text-slate-950">{step.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-slate-600">{step.description}</p>
+                <h3 className="mt-3 text-lg font-bold text-slate-950">
+                  {step.title}
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-slate-600">
+                  {step.description}
+                </p>
               </article>
             ))}
           </div>

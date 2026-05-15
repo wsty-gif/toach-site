@@ -38,12 +38,12 @@ export default function FaqPage() {
         description="導入前によくいただく質問をまとめました。小さな疑問でもお気軽にご相談ください。"
       />
 
-      <section className="px-5 py-20">
+      <section className="px-4 py-14 sm:px-5 sm:py-16 md:py-20">
         <div className="mx-auto max-w-4xl space-y-5">
           {faqItems.map((item) => (
             <details
               key={item.question}
-              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+              className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6"
             >
               <summary className="cursor-pointer text-lg font-bold text-slate-950">
                 {item.question}

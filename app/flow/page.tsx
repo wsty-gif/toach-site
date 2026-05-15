@@ -2,40 +2,69 @@ import type { Metadata } from "next";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import PageLead from "@/components/layout/PageLead";
+import CtaSection from "@/components/sections/CtaSection";
+import ProductFlowIllustration from "@/components/sections/ProductFlowIllustration";
 import { flowSteps } from "@/lib/siteContent";
 
 export const metadata: Metadata = {
   title: "ご利用の流れ",
   description:
-    "TOACHのお問い合わせから導入、運用開始までの流れを分かりやすく紹介します。",
+    "TOACHの問い合わせから導入、運用開始までの流れを分かりやすく紹介します。",
 };
 
 export default function FlowPage() {
   return (
     <main>
       <Navbar />
+
       <PageLead
         eyebrow="Flow"
         title="ご利用の流れ"
-        description="初めての方でも安心して進められるよう、導入前の相談から初期設定、操作説明、運用開始後の改善までサポートします。"
+        description="初めての方でも安心して進められるよう、導入前の相談から運用開始後までサポートします。"
       />
 
-      <section className="px-5 py-20">
-        <div className="mx-auto grid max-w-5xl gap-6">
-          {flowSteps.map((step) => (
-            <article
-              key={step.step}
-              className="grid gap-5 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm md:grid-cols-[120px_1fr]"
-            >
-              <p className="font-bold text-blue-700">STEP {step.step}</p>
-              <div>
-                <h2 className="text-2xl font-bold text-slate-950">{step.title}</h2>
-                <p className="mt-4 leading-8 text-slate-600">{step.description}</p>
-              </div>
-            </article>
-          ))}
+      <ProductFlowIllustration />
+
+      <section className="px-5 py-20 md:py-24">
+        <div className="mx-auto max-w-5xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
+              Steps
+            </p>
+
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-5xl">
+              導入までの流れ
+            </h2>
+
+            <p className="mt-6 leading-9 text-slate-600">
+              お問い合わせ後、現在の運用状況を伺いながら、TOACHでどのように整えられるかをご案内します。
+              導入を決めていない段階でもご相談いただけます。
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6">
+            {flowSteps.map((step) => (
+              <article
+                key={step.step}
+                className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm"
+              >
+                <p className="font-bold text-blue-700">STEP {step.step}</p>
+                <h3 className="mt-3 text-2xl font-bold text-slate-950">
+                  {step.title}
+                </h3>
+                <p className="mt-4 leading-8 text-slate-600">
+                  {step.description}
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
+
+      <CtaSection
+        title="まずは無料相談から始められます。"
+        description="導入するか決まっていなくても問題ありません。今の管理方法を整理するだけでも、改善のヒントが見つかります。"
+      />
 
       <Footer />
     </main>

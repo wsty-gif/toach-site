@@ -2,14 +2,14 @@ import { serviceItems, serviceUseCases } from "@/lib/siteContent";
 
 export default function FeatureDetailGrid() {
   return (
-    <section className="bg-slate-50 px-5 py-20 md:py-24">
+    <section className="bg-slate-50 px-4 py-14 sm:px-5 sm:py-16 md:py-24">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-blue-700 sm:text-sm sm:tracking-[0.2em]">
               Features
             </p>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-5xl">
+            <h2 className="mt-4 text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl md:text-5xl">
               現場運用に必要な機能を、まとめて管理。
             </h2>
             <p className="mt-6 leading-9 text-slate-600">
@@ -33,8 +33,8 @@ export default function FeatureDetailGrid() {
           </div>
         </div>
 
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-slate-950">
+        <div className="mt-12 md:mt-16">
+          <h3 className="text-xl font-bold text-slate-950 sm:text-2xl">
             このような運用で使われます。
           </h3>
 

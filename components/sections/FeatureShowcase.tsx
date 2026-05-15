@@ -3,13 +3,13 @@ import { featureShowcases } from "@/lib/siteContent";
 
 export default function FeatureShowcase() {
   return (
-    <section className="bg-white px-5 py-20 md:py-24">
+    <section className="bg-white px-4 py-14 sm:px-5 sm:py-16 md:py-24">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-3xl">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
+          <p className="text-xs font-bold uppercase tracking-[0.16em] text-blue-700 sm:text-sm sm:tracking-[0.2em]">
             Screens
           </p>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-5xl">
+          <h2 className="mt-4 text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl md:text-5xl">
             実際の画面で、使い方をイメージできます。
           </h2>
           <p className="mt-6 leading-9 text-slate-600">
@@ -18,14 +18,14 @@ export default function FeatureShowcase() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-16">
+        <div className="mt-10 grid gap-12 md:mt-14 md:gap-16">
           {featureShowcases.map((feature, index) => (
             <article
               key={feature.id}
               className="grid gap-8 lg:grid-cols-2 lg:items-center"
             >
               <div className={index % 2 === 1 ? "lg:order-2" : undefined}>
-                <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-blue-700 sm:text-sm sm:tracking-[0.2em]">
                   {feature.label}
                 </p>
                 <h3 className="mt-4 text-2xl font-bold leading-tight text-slate-950 md:text-4xl">
@@ -49,7 +49,7 @@ export default function FeatureShowcase() {
               </div>
 
               <div className={index % 2 === 1 ? "lg:order-1" : undefined}>
-                <div className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 p-3 shadow-xl">
+                <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 p-2 shadow-xl sm:rounded-3xl sm:p-3">
                   <div className="flex items-center gap-2 border-b border-slate-200 bg-white px-4 py-3">
                     <span className="h-3 w-3 rounded-full bg-red-300" />
                     <span className="h-3 w-3 rounded-full bg-yellow-300" />
@@ -59,7 +59,7 @@ export default function FeatureShowcase() {
                     </span>
                   </div>
 
-                  <div className="relative aspect-[16/10] overflow-hidden rounded-b-2xl bg-white">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-b-2xl bg-white sm:aspect-[16/10]">
                     <Image
                       src={feature.image}
                       alt={feature.alt}

@@ -20,12 +20,12 @@ export default function CasesPage() {
         description="実際の現場に近い活用例をもとに、TOACH導入後の変化を紹介します。マニュアル、タスク、教育、承認をまとめることで、確認業務の負担を減らします。"
       />
 
-      <section className="px-5 py-20">
+      <section className="px-4 py-14 sm:px-5 sm:py-16 md:py-20">
         <div className="mx-auto grid max-w-6xl gap-8">
           {caseStudies.map((item) => (
             <article
               key={item.title}
-              className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm"
+              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:rounded-3xl sm:p-8"
             >
               <p className="font-bold text-blue-700">{item.industry}</p>
               <h2 className="mt-4 text-2xl font-bold leading-tight text-slate-950">
