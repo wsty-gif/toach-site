@@ -6,7 +6,7 @@ export default function FeatureDetailGrid() {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-blue-700 sm:text-sm sm:tracking-[0.2em]">
+            <p className="eyebrow-pill text-xs font-bold uppercase tracking-[0.16em] sm:text-sm sm:tracking-[0.2em]">
               Features
             </p>
             <h2 className="mt-4 text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl md:text-5xl">
@@ -18,11 +18,11 @@ export default function FeatureDetailGrid() {
             </p>
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-2">
+          <div className="reveal-stagger grid gap-5 sm:grid-cols-2">
             {serviceItems.map((item) => (
               <article
                 key={item.title}
-                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+                className="card-hover rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
               >
                 <h3 className="text-xl font-bold text-slate-950">{item.title}</h3>
                 <p className="mt-4 leading-8 text-slate-600">
@@ -38,9 +38,9 @@ export default function FeatureDetailGrid() {
             このような運用で使われます。
           </h3>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="reveal-stagger mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {serviceUseCases.map((item) => (
-              <article key={item.title} className="rounded-2xl bg-white p-6 shadow-sm">
+              <article key={item.title} className="card-hover rounded-2xl bg-white p-6 shadow-sm">
                 <h4 className="font-bold leading-8 text-slate-950">
                   {item.title}
                 </h4>

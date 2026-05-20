@@ -6,7 +6,7 @@ export default function FeatureShowcase() {
     <section className="bg-white px-4 py-14 sm:px-5 sm:py-16 md:py-24">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-3xl">
-          <p className="text-xs font-bold uppercase tracking-[0.16em] text-blue-700 sm:text-sm sm:tracking-[0.2em]">
+          <p className="eyebrow-pill text-xs font-bold uppercase tracking-[0.16em] sm:text-sm sm:tracking-[0.2em]">
             Screens
           </p>
           <h2 className="mt-4 text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl md:text-5xl">
@@ -22,7 +22,7 @@ export default function FeatureShowcase() {
           {featureShowcases.map((feature, index) => (
             <article
               key={feature.id}
-              className="grid gap-8 lg:grid-cols-2 lg:items-center"
+              className="reveal-on-scroll grid gap-8 lg:grid-cols-2 lg:items-center"
             >
               <div className={index % 2 === 1 ? "lg:order-2" : undefined}>
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-blue-700 sm:text-sm sm:tracking-[0.2em]">
@@ -39,7 +39,7 @@ export default function FeatureShowcase() {
                   {feature.points.map((point) => (
                     <li
                       key={point}
-                      className="flex gap-3 rounded-2xl bg-slate-50 p-4 text-slate-700"
+                      className="card-hover flex gap-3 rounded-2xl bg-slate-50 p-4 text-slate-700"
                     >
                       <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-blue-700" />
                       <span>{point}</span>
@@ -49,7 +49,7 @@ export default function FeatureShowcase() {
               </div>
 
               <div className={index % 2 === 1 ? "lg:order-1" : undefined}>
-                <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 p-2 shadow-xl sm:rounded-3xl sm:p-3">
+                <div className="soft-panel overflow-hidden rounded-2xl bg-slate-100 p-2 sm:rounded-3xl sm:p-3">
                   <div className="flex items-center gap-2 border-b border-slate-200 bg-white px-4 py-3">
                     <span className="h-3 w-3 rounded-full bg-red-300" />
                     <span className="h-3 w-3 rounded-full bg-yellow-300" />

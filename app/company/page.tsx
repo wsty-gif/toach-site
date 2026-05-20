@@ -19,6 +19,8 @@ export default function CompanyPage() {
         eyebrow="Company"
         title="会社概要"
         description="株式会社TETOTEの基本情報をご紹介します。"
+        illustration="company"
+        illustrationCaption="運営会社の基本情報をご確認いただけます。"
       />
 
       <section className="px-5 py-20 md:py-24">

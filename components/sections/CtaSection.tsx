@@ -11,8 +11,8 @@ export default function CtaSection({
   description = "導入を決めていない段階でも大丈夫です。現在の課題を伺いながら、無理のない進め方をご提案します。",
 }: CtaSectionProps) {
   return (
-    <section className="bg-blue-700 px-4 py-14 text-white sm:px-5 sm:py-16 md:py-24">
-      <div className="mx-auto max-w-4xl text-center">
+    <section className="px-4 py-14 text-white sm:px-5 sm:py-16 md:py-24">
+      <div className="mx-auto max-w-5xl overflow-hidden rounded-[2rem] bg-gradient-to-br from-blue-800 via-blue-700 to-sky-600 px-6 py-12 text-center shadow-2xl shadow-blue-900/20 sm:px-10 md:py-16">
         <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-5xl">
           {title}
         </h2>

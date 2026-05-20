@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
@@ -15,6 +16,33 @@ export const metadata: Metadata = {
     "TOACHの料金プランをご紹介します。マニュアル管理、タスク配信、承認、ラーニング、ユーザー管理をまとめた基本プランを個別にご案内します。",
 };
 
+const priceImageCards = [
+  {
+    number: "01",
+    title: "基本プラン",
+    description:
+      "マニュアル管理、タスク配信、承認、ラーニング、ユーザー管理をまとめて利用できます。",
+    src: "https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/Calculator_0evy.svg",
+    alt: "基本プランの費用を確認するイラスト",
+  },
+  {
+    number: "02",
+    title: "人数による変動なし",
+    description:
+      "利用人数が増えても、人数を理由に月額費用が変わることはありません。",
+    src: "https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/online_payments_luau.svg",
+    alt: "オンライン決済や費用管理を表すイラスト",
+  },
+  {
+    number: "03",
+    title: "導入支援は個別相談",
+    description:
+      "初期設定、既存マニュアル整理、運用ルール設計などが必要な場合は、内容に応じてご案内します。",
+    src: "https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/personal_finance_tqcd.svg",
+    alt: "個別相談で費用感を整理するイラスト",
+  },
+] as const;
+
 export default function PricingPage() {
   return (
     <main>
@@ -24,6 +52,7 @@ export default function PricingPage() {
         eyebrow="Pricing"
         title="料金プラン"
         description="TOACHは、必要な機能をまとめた1つの基本プランでご案内しています。利用人数による料金変動はありません。"
+        illustration="pricing"
       />
 
       <section className="bg-white px-5 pb-10">
@@ -77,30 +106,28 @@ export default function PricingPage() {
             利用人数が増えても、人数を理由に月額費用が変わることはありません。
           </p>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            <div className="rounded-3xl bg-white/10 p-7">
-              <p className="text-sm font-bold text-blue-200">01</p>
-              <h3 className="mt-3 text-xl font-bold">基本プラン</h3>
-              <p className="mt-4 text-sm leading-7 text-slate-300">
-                マニュアル管理、タスク配信、承認、ラーニング、ユーザー管理をまとめて利用できます。
-              </p>
-            </div>
-
-            <div className="rounded-3xl bg-white/10 p-7">
-              <p className="text-sm font-bold text-blue-200">02</p>
-              <h3 className="mt-3 text-xl font-bold">人数による変動なし</h3>
-              <p className="mt-4 text-sm leading-7 text-slate-300">
-                利用人数が増えても、人数を理由に月額費用が変わることはありません。
-              </p>
-            </div>
-
-            <div className="rounded-3xl bg-white/10 p-7">
-              <p className="text-sm font-bold text-blue-200">03</p>
-              <h3 className="mt-3 text-xl font-bold">導入支援は個別相談</h3>
-              <p className="mt-4 text-sm leading-7 text-slate-300">
-                初期設定、既存マニュアル整理、運用ルール設計などが必要な場合は、内容に応じてご案内します。
-              </p>
-            </div>
+          <div className="reveal-stagger mt-12 grid gap-6 md:grid-cols-3">
+            {priceImageCards.map((card) => (
+              <article key={card.title} className="rounded-3xl bg-white/10 p-5">
+                <div className="relative h-36 rounded-2xl bg-white">
+                  <Image
+                    src={card.src}
+                    alt={card.alt}
+                    fill
+                    sizes="(min-width: 768px) 310px, 90vw"
+                    className="object-contain p-4"
+                    unoptimized
+                  />
+                </div>
+                <p className="mt-5 text-sm font-bold text-blue-200">
+                  {card.number}
+                </p>
+                <h3 className="mt-3 text-xl font-bold">{card.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-slate-300">
+                  {card.description}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

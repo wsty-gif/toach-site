@@ -37,7 +37,7 @@ export default function OperationIllustration({ compact = false }: OperationIllu
     <section className={`${compact ? "py-14" : "py-20 md:py-24"} bg-white px-5`}>
       <div className="mx-auto max-w-6xl">
         <div className="max-w-3xl">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
+          <p className="eyebrow-pill text-sm font-bold uppercase tracking-[0.2em]">
             Operation
           </p>
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-5xl">
@@ -49,7 +49,7 @@ export default function OperationIllustration({ compact = false }: OperationIllu
           </p>
         </div>
 
-        <div className="mt-12 rounded-3xl border border-slate-200 bg-slate-50 p-6 md:p-8">
+        <div className="soft-panel mt-12 rounded-[2rem] p-6 md:p-8">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
             <div>
               <p className="text-sm font-bold text-red-600">Before</p>
@@ -59,7 +59,7 @@ export default function OperationIllustration({ compact = false }: OperationIllu
 
               <div className="mt-6 grid gap-4">
                 {problems.map((item) => (
-                  <div key={item.title} className="rounded-2xl bg-white p-5 shadow-sm">
+                  <div key={item.title} className="card-hover rounded-2xl bg-white p-5 shadow-sm">
                     <div className="flex items-center gap-3">
                       <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-100 text-lg">
                         !
@@ -88,7 +88,7 @@ export default function OperationIllustration({ compact = false }: OperationIllu
 
               <div className="mt-6 grid gap-4">
                 {outcomes.map((item) => (
-                  <div key={item.title} className="rounded-2xl bg-white p-5 shadow-sm">
+                  <div key={item.title} className="card-hover rounded-2xl bg-white p-5 shadow-sm">
                     <div className="flex items-center gap-3">
                       <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-lg text-blue-700">
                         ✓
@@ -104,7 +104,7 @@ export default function OperationIllustration({ compact = false }: OperationIllu
             </div>
           </div>
 
-          <div className="mt-8 rounded-3xl bg-white p-6">
+          <div className="mt-8 rounded-3xl bg-white p-6 shadow-sm">
             <div className="grid gap-4 md:grid-cols-4">
               {["手順を作る", "タスクで配る", "承認する", "履歴で改善"].map((step, index) => (
                 <div key={step} className="relative rounded-2xl bg-blue-50 p-5 text-center">

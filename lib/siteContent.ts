@@ -32,22 +32,24 @@ export const secondaryCta = {
 } as const;
 
 export const painPoints = [
-  "マニュアルを作っても、読まれているか分からない",
-  "業務指示を出しても、実施状況が見えにくい",
-  "新人教育や異動後の教育に抜け漏れが出る",
-  "承認や確認業務が担当者任せになっている",
+  "マニュアルや社内資料が散在して、必要な情報がすぐに見つからない",
+  "業務の進め方や対応が人によって違い、品質にばらつきが出てしまう",
+  "新人教育やOJTに時間がかかり、教育担当の負担が大きい",
+  "やるべきことの抜け漏れや、確認漏れが発生してしまう",
+  "コンプライアンス研修や社内ルールの運用・管理が大変",
+  "本当に理解・定着できているかを確認できず、不安が残る",
 ] as const;
 
 export const serviceItems = [
   {
     title: "マニュアル管理",
     description:
-      "画像つきの手順書や業務マニュアルを、現場で見やすい形に整理できます。",
+      "決まったガイドに沿って入力するだけで、画像や動画つきのマニュアルを作成・共有できます。",
   },
   {
     title: "タスク配信",
     description:
-      "必要な人に必要な業務を配信し、完了状況まで確認できます。",
+      "マニュアルとタスクを紐づけて配信し、誰がどこまで完了したかをリアルタイムで確認できます。",
   },
   {
     title: "承認フロー",
@@ -57,30 +59,105 @@ export const serviceItems = [
   {
     title: "ラーニング運用",
     description:
-      "動画、テキスト、クイズを組み合わせて、教育の進捗を管理できます。",
+      "テキスト、動画、テストを組み合わせて、理解度や定着度まで可視化できます。",
   },
 ] as const;
 
 export const reasons = [
   {
-    title: "伝えるだけで終わらない",
+    title: "標準化から実行までつながる",
     description:
       "マニュアルを共有するだけでなく、読んだか、実施したか、承認されたかまで確認できます。",
   },
   {
-    title: "現場で使いやすい",
+    title: "対応漏れを防ぎやすい",
     description:
-      "専門知識がなくても迷いにくい画面設計で、管理者にも現場スタッフにも使いやすい構成です。",
+      "タスクの進捗管理や期限管理により、やるべきことの抜け漏れや確認漏れを防ぎやすくなります。",
   },
   {
-    title: "教育と業務をつなげられる",
+    title: "教育負担を軽減できる",
     description:
-      "新人教育、定期確認、業務実施を分けずに、ひとつの流れとして管理できます。",
+      "新人教育、OJT、研修内容を仕組み化し、人に依存しすぎない教育運用を支えます。",
   },
   {
-    title: "多拠点でも状況が見える",
+    title: "ナレッジを組織の資産にできる",
     description:
-      "店舗や部署ごとの進捗を確認できるため、本部や管理者の確認負担を減らせます。",
+      "社内の知識やノウハウを蓄積・共有し、店舗や部署をまたいで活用できます。",
+  },
+] as const;
+
+export const organizationChallenges = [
+  {
+    title: "人材不足・人手の負担増",
+    description:
+      "人に依存した教育・運用では、現場の負担が増え続け、改善の余裕が生まれません。",
+  },
+  {
+    title: "業務の属人化",
+    description:
+      "この人しか分からない状態が続くと、急な欠員や異動時に大きなリスクになります。",
+  },
+  {
+    title: "教育・品質のばらつき",
+    description:
+      "教える人によって内容や進め方が違い、品質や成果にばらつきが出ます。",
+  },
+  {
+    title: "社内資料・ノウハウの散在",
+    description:
+      "マニュアルや資料が各所に散在すると、探す時間が増え、活用されにくくなります。",
+  },
+] as const;
+
+export const operationPillars = [
+  {
+    step: "01",
+    title: "標準化",
+    subtitle: "マニュアル",
+    description:
+      "業務手順や社内ルールを見える化し、誰でも同じ品質で業務を行える状態にします。",
+  },
+  {
+    step: "02",
+    title: "実行・実践",
+    subtitle: "タスク管理",
+    description:
+      "やるべきことを明確にし、進捗や抜け漏れをリアルタイムで可視化します。",
+  },
+  {
+    step: "03",
+    title: "教育・定着",
+    subtitle: "ラーニング",
+    description:
+      "テキスト・動画・テストで理解を深め、理解度や定着度を確認できます。",
+  },
+] as const;
+
+export const operationBenefits = [
+  {
+    title: "生産性の向上",
+    description:
+      "業務の標準化でムダを削減し、組織全体の生産性向上を支えます。",
+  },
+  {
+    title: "対応漏れの防止",
+    description:
+      "タスクの抜け漏れや確認漏れを防ぎ、ミスやトラブルを未然に減らします。",
+  },
+  {
+    title: "教育負担の軽減",
+    description:
+      "教育の仕組み化により、人に依存せず効率的に育成できます。",
+  },
+  {
+    title: "コンプライアンス強化",
+    description:
+      "社内ルールや研修の運用を仕組み化し、意識を組織全体に浸透させます。",
+  },
+  {
+    title: "ナレッジの共有・活用",
+    description:
+      "社内の知識やノウハウを資産として蓄積し、組織の力を底上げします。",
   },
 ] as const;
 
@@ -327,24 +404,34 @@ export const featureShowcases = [
 
 export const serviceUseCases = [
   {
-    title: "多店舗・多拠点の運営",
+    title: "新人教育・OJT",
     description:
-      "本部から現場への周知、店舗ごとの実施確認、教育進捗の確認をまとめて管理できます。",
+      "入社時研修やOJTの内容を体系化し、効率的に教育を実施できます。",
   },
   {
-    title: "新人教育・異動後教育",
+    title: "社内マニュアル",
     description:
-      "配属先や担当者によって教育内容が変わらないよう、必要なマニュアルや教育タスクを整理できます。",
+      "業務手順や社内ルールを一元管理し、いつでも共有できます。",
   },
   {
-    title: "定期確認・チェック業務",
+    title: "コンプライアンス研修",
     description:
-      "毎日、毎週、毎月の確認業務をタスク化し、実施漏れや確認漏れを減らします。",
+      "法令・社内規程の教育を計画的に実施し、理解度も確認できます。",
   },
   {
-    title: "承認が必要な業務",
+    title: "多店舗・拠点運営",
     description:
-      "完了報告だけでなく、管理者の確認、承認、差し戻しまでを一つの流れで管理できます。",
+      "店舗・拠点ごとの標準化を実現し、品質やサービスを均一化します。",
+  },
+  {
+    title: "業務標準化",
+    description:
+      "業務プロセスを標準化し、属人化を防ぎ、生産性を高めます。",
+  },
+  {
+    title: "ナレッジ共有",
+    description:
+      "社内の知識やノウハウを蓄積・共有し、組織の力として活用できます。",
   },
 ] as const;
 
@@ -373,6 +460,90 @@ export const pricingPlan = {
     "QRコード共有",
   ],
 } as const;
+
+export const pricingPlans = [
+  {
+    name: "基本プラン",
+    badge: "標準機能をまとめて提供",
+    priceLabel: "個別案内",
+    lead:
+      "マニュアル管理、タスク配信、承認、ラーニング、ユーザー管理をまとめて利用できます。",
+    ctaLabel: "料金を相談する",
+    ctaHref: "/contact?type=pricing",
+    recommended: true,
+    highlights: [
+      "マニュアル作成・共有",
+      "タスク配信・進捗管理",
+      "教育・理解度チェック",
+      "ユーザー・部署管理",
+    ],
+  },
+  {
+    name: "導入支援",
+    badge: "初期運用を整える支援",
+    priceLabel: "要相談",
+    lead:
+      "既存資料の整理、運用ルール設計、初期設定など、導入時に必要な支援をご案内します。",
+    ctaLabel: "導入支援を相談する",
+    ctaHref: "/contact?type=implementation",
+    recommended: false,
+    highlights: [
+      "既存マニュアル整理",
+      "部署・権限の初期設定",
+      "運用ルール設計",
+      "管理者向け説明",
+    ],
+  },
+  {
+    name: "運用支援",
+    badge: "定着と改善を支える支援",
+    priceLabel: "要相談",
+    lead:
+      "運用開始後の活用状況を見ながら、教育やタスク運用の改善を支援します。",
+    ctaLabel: "運用支援を相談する",
+    ctaHref: "/contact?type=support",
+    recommended: false,
+    highlights: [
+      "活用状況の確認",
+      "教育コンテンツ改善",
+      "タスク運用の見直し",
+      "レポート活用支援",
+    ],
+  },
+] as const;
+
+export const pricingOptions = [
+  {
+    title: "初期設定支援",
+    description:
+      "ユーザー、部署、権限、カテゴリなど、利用開始に必要な設定を支援します。",
+  },
+  {
+    title: "マニュアル整理支援",
+    description:
+      "既存の資料や手順書を、現場で探しやすく使いやすい構成に整理します。",
+  },
+  {
+    title: "教育コンテンツ設計",
+    description:
+      "新人教育、OJT、コンプライアンス研修などの教材設計を支援します。",
+  },
+  {
+    title: "運用ルール設計",
+    description:
+      "タスク配信、承認、確認頻度、管理者の役割などを現場に合わせて整理します。",
+  },
+  {
+    title: "操作説明",
+    description:
+      "管理者や現場スタッフ向けに、基本操作や運用の流れを説明します。",
+  },
+  {
+    title: "定着・改善支援",
+    description:
+      "運用開始後の課題を確認し、利用定着や改善サイクルづくりを支援します。",
+  },
+] as const;
 
 export const pricingFeatureDiagramItems = [
   {
@@ -455,6 +626,45 @@ export const pricingIncludedGroups = [
   {
     title: "共有・活用",
     items: ["社内共有", "社外共有", "QRコード共有", "レポート確認"],
+  },
+] as const;
+
+export const pricingFeatureRows = [
+  {
+    category: "マニュアル管理",
+    features: [
+      { name: "マニュアル作成・閲覧", light: "○", business: "○", enterprise: "○" },
+      { name: "カテゴリ管理", light: "○", business: "○", enterprise: "○" },
+      { name: "画像・動画の添付", light: "○", business: "○", enterprise: "○" },
+      { name: "閲覧履歴・更新履歴", light: "△", business: "○", enterprise: "○" },
+    ],
+  },
+  {
+    category: "タスク管理",
+    features: [
+      { name: "タスク配信", light: "○", business: "○", enterprise: "○" },
+      { name: "グループタスク", light: "△", business: "○", enterprise: "○" },
+      { name: "定期タスク", light: "△", business: "○", enterprise: "○" },
+      { name: "進捗確認・完了報告", light: "○", business: "○", enterprise: "○" },
+    ],
+  },
+  {
+    category: "教育・ラーニング",
+    features: [
+      { name: "コース作成", light: "△", business: "○", enterprise: "○" },
+      { name: "動画・テキスト教材", light: "△", business: "○", enterprise: "○" },
+      { name: "テスト・理解度確認", light: "−", business: "○", enterprise: "○" },
+      { name: "受講状況・合格状況管理", light: "−", business: "○", enterprise: "○" },
+    ],
+  },
+  {
+    category: "管理・共有",
+    features: [
+      { name: "ユーザー管理", light: "○", business: "○", enterprise: "○" },
+      { name: "部署別管理", light: "△", business: "○", enterprise: "○" },
+      { name: "社内共有・社外共有", light: "△", business: "○", enterprise: "○" },
+      { name: "レポート確認", light: "−", business: "○", enterprise: "○" },
+    ],
   },
 ] as const;
 

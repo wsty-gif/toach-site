@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Suspense } from "react";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
@@ -12,6 +13,21 @@ export const metadata: Metadata = {
     "TOACHのサービス内容、料金、導入方法についてお気軽にお問い合わせください。",
 };
 
+const contactTopics = [
+  {
+    title: "デモ・導入相談",
+    description: "実際の画面や導入イメージを確認できます。",
+    src: "https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/relaxing_at_home_9tyc.svg",
+    alt: "オンラインで相談しているイラスト",
+  },
+  {
+    title: "資料請求・料金確認",
+    description: "検討に必要な資料や費用感を確認できます。",
+    src: "https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/successful_purchase_uyin.svg",
+    alt: "資料請求や料金確認を表すイラスト",
+  },
+] as const;
+
 export default function ContactPage() {
   return (
     <main>
@@ -21,6 +37,7 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="お問い合わせ"
         description="デモ・導入相談、サービス資料請求、料金確認など、どのような内容でもお気軽にお問い合わせください。"
+        illustration="contact"
       />
 
       <section className="px-5 py-20 md:py-24">
@@ -51,6 +68,32 @@ export default function ContactPage() {
                 <li>・自社の運用に合うか相談したい</li>
                 <li>・導入までの流れを知りたい</li>
               </ul>
+            </div>
+
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              {contactTopics.map((item) => (
+                <article
+                  key={item.title}
+                  className="card-hover overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
+                >
+                  <div className="relative h-32 bg-gradient-to-br from-white to-sky-50">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      sizes="(min-width: 640px) 240px, 90vw"
+                      className="object-contain p-4"
+                      unoptimized
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-bold text-slate-950">{item.title}</h3>
+                    <p className="mt-2 text-sm leading-7 text-slate-600">
+                      {item.description}
+                    </p>
+                  </div>
+                </article>
+              ))}
             </div>
 
             <div className="mt-6 rounded-3xl bg-blue-700 p-6 text-white">

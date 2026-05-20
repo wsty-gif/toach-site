@@ -27,7 +27,7 @@ export default function ImprovementCycle() {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
+            <p className="eyebrow-pill text-sm font-bold uppercase tracking-[0.2em]">
               Cycle
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-5xl">
@@ -39,12 +39,12 @@ export default function ImprovementCycle() {
             </p>
           </div>
 
-          <div className="relative rounded-full bg-blue-50 p-6 md:p-10">
-            <div className="grid gap-4">
+          <div className="relative rounded-[2rem] bg-blue-50 p-6 shadow-inner md:p-10">
+            <div className="reveal-stagger grid gap-4">
               {cycleItems.map((item, index) => (
                 <div
                   key={item.title}
-                  className="flex items-center gap-4 rounded-3xl bg-white p-5 shadow-sm"
+                  className="card-hover flex items-center gap-4 rounded-3xl bg-white p-5 shadow-sm"
                 >
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-700 text-sm font-black text-white">
                     {index + 1}
