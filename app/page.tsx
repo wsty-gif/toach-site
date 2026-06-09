@@ -317,7 +317,7 @@ export default function Home() {
             {problems.map((item, index) => (
               <article
                 key={item}
-                className="card-hover rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm"
+                className="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm"
               >
                 <p className="text-sm font-bold text-blue-700">
                   ISSUE {String(index + 1).padStart(2, "0")}
@@ -342,7 +342,7 @@ export default function Home() {
             {pillars.map((item) => (
               <article
                 key={item.title}
-                className="card-hover overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
+                className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
               >
                 <ToachSceneIllustration variant={item.illustration} className="h-48" />
                 <div className="p-7">
@@ -370,7 +370,7 @@ export default function Home() {
             {featureGroups.map((group) => (
               <article
                 key={group.category}
-                className="card-hover grid gap-5 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:grid-cols-[150px_1fr]"
+                className="grid gap-5 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:grid-cols-[150px_1fr]"
               >
                 <ToachSceneIllustration
                   variant={group.illustration}
@@ -438,7 +438,7 @@ export default function Home() {
             {useCases.map((item, index) => (
               <article
                 key={item}
-                className="card-hover rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+                className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
               >
                 <div className="relative mb-4 h-24 overflow-hidden rounded-2xl bg-gradient-to-br from-white to-sky-50">
                   <Image
@@ -469,7 +469,7 @@ export default function Home() {
             {flowSteps.slice(0, 4).map((step) => (
               <article
                 key={step.step}
-                className="card-hover rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
               >
                 <p className="font-bold text-blue-700">STEP {step.step}</p>
                 <h3 className="mt-3 text-lg font-bold text-slate-950">

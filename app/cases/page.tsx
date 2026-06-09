@@ -42,7 +42,7 @@ export default function CasesPage() {
           {caseStudies.map((item, index) => (
             <article
               key={item.title}
-              className="card-hover overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm sm:rounded-3xl"
+              className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm sm:rounded-3xl"
             >
               <div className="grid gap-6 p-6 sm:p-8 lg:grid-cols-[240px_1fr] lg:items-center">
                 <div className="relative min-h-[180px] rounded-3xl bg-gradient-to-br from-white to-sky-50">

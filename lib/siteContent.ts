@@ -22,8 +22,8 @@ export const navLinks = [
 ] as const;
 
 export const primaryCta = {
-  label: "デモ・導入相談を申し込む",
-  href: "/contact?type=demo",
+  label: "導入相談を申し込む",
+  href: "/contact?type=consultation",
 } as const;
 
 export const secondaryCta = {
@@ -333,15 +333,19 @@ export const featureShowcases = [
   {
     id: "dashboard",
     label: "Dashboard",
-    title: "現場の状況を、ひと目で確認できます。",
+    title: "今日確認すべき動きが、すぐに分かります。",
     description:
-      "ダッシュボードでは、マニュアル確認、タスク完了、承認待ち、教育進捗などをまとめて確認できます。",
-    image: "/images/features/dashboard.png",
+      "ダッシュボードでは、未完了のトレーニング、承認待ちの件数、最近更新されたマニュアル、閲覧状況などをまとめて確認できます。管理者は対応が必要なものを見つけやすく、利用者は自分の次のアクションに迷いにくくなります。",
+    image: "/images/features/dashboard-1.png",
+    images: [
+      "/images/features/dashboard-1.png",
+      "/images/features/dashboard-2.png",
+    ],
     alt: "TOACHのダッシュボード画面",
     points: [
-      "確認が必要な情報を一覧で把握",
-      "対応待ちや承認待ちを見逃しにくい",
-      "現場ごとの進捗確認に役立つ",
+      "未完了のタスクやトレーニングを確認",
+      "承認待ちの件数から優先対応を判断",
+      "更新マニュアルや閲覧状況で現場の動きを把握",
     ],
   },
   {

@@ -73,7 +73,7 @@ export default function FaqPage() {
             {faqHighlights.map((item) => (
               <article
                 key={item.title}
-                className="card-hover overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
+                className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
               >
                 <div className="relative h-36 bg-gradient-to-br from-white to-sky-50">
                   <Image
@@ -99,7 +99,7 @@ export default function FaqPage() {
           {faqItems.map((item) => (
             <details
               key={item.question}
-              className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6"
+              className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-blue-200 hover:bg-blue-50/40 sm:p-6"
             >
               <summary className="cursor-pointer text-lg font-bold text-slate-950">
                 {item.question}

@@ -87,16 +87,6 @@ a.inline-flex.rounded-full:hover {
   backdrop-filter: blur(14px);
 }
 
-.card-hover {
-  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
-}
-
-.card-hover:hover {
-  transform: translateY(-4px);
-  border-color: rgba(37, 99, 235, 0.22);
-  box-shadow: 0 20px 42px rgba(15, 23, 42, 0.1);
-}
-
 @keyframes reveal-up {
   from {
     opacity: 0;

@@ -51,7 +51,7 @@ export default function ProductFlowIllustration() {
           {productFlow.map((item, index) => (
             <article
               key={item.title}
-              className="card-hover relative rounded-3xl border border-slate-200 bg-white p-7 shadow-sm"
+              className="relative rounded-3xl border border-slate-200 bg-white p-7 shadow-sm"
             >
               <div className="flex items-start gap-4">
                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-sm font-bold text-blue-700">

@@ -104,7 +104,7 @@ export default function ServicePage() {
             {serviceItems.map((item, index) => (
               <article
                 key={item.title}
-                className="card-hover grid gap-6 overflow-hidden rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:grid-cols-[180px_1fr] sm:items-center"
+                className="grid gap-6 overflow-hidden rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:grid-cols-[180px_1fr] sm:items-center"
               >
                 <div className="relative min-h-[150px] rounded-2xl bg-gradient-to-br from-sky-50 to-blue-50 p-4">
                   <Image
@@ -159,7 +159,7 @@ export default function ServicePage() {
             {serviceUseCases.map((item, index) => (
               <article
                 key={item.title}
-                className="card-hover overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
+                className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
               >
                 <div className="relative h-44 bg-gradient-to-br from-white to-sky-50">
                   <Image

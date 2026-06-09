@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import { featureShowcases } from "@/lib/siteContent";
 
 export default function FeatureShowcase() {
@@ -39,7 +42,7 @@ export default function FeatureShowcase() {
                   {feature.points.map((point) => (
                     <li
                       key={point}
-                      className="card-hover flex gap-3 rounded-2xl bg-slate-50 p-4 text-slate-700"
+                      className="flex gap-3 rounded-2xl bg-slate-50 p-4 text-slate-700"
                     >
                       <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-blue-700" />
                       <span>{point}</span>
@@ -49,31 +52,89 @@ export default function FeatureShowcase() {
               </div>
 
               <div className={index % 2 === 1 ? "lg:order-1" : undefined}>
-                <div className="soft-panel overflow-hidden rounded-2xl bg-slate-100 p-2 sm:rounded-3xl sm:p-3">
-                  <div className="flex items-center gap-2 border-b border-slate-200 bg-white px-4 py-3">
-                    <span className="h-3 w-3 rounded-full bg-red-300" />
-                    <span className="h-3 w-3 rounded-full bg-yellow-300" />
-                    <span className="h-3 w-3 rounded-full bg-green-300" />
-                    <span className="ml-3 text-xs font-bold text-slate-400">
-                      {feature.label}
-                    </span>
-                  </div>
-
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-b-2xl bg-white sm:aspect-[16/10]">
-                    <Image
-                      src={feature.image}
-                      alt={feature.alt}
-                      fill
-                      sizes="(min-width: 1024px) 50vw, 100vw"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
+                <FeatureImagePanel feature={feature} />
               </div>
             </article>
           ))}
         </div>
       </div>
     </section>
+  );
+}
+
+type FeatureShowcaseItem = (typeof featureShowcases)[number];
+
+function FeatureImagePanel({ feature }: { feature: FeatureShowcaseItem }) {
+  const images = "images" in feature ? feature.images : [feature.image];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const hasMultipleImages = images.length > 1;
+
+  function showPreviousImage() {
+    setCurrentImageIndex((current) =>
+      current === 0 ? images.length - 1 : current - 1,
+    );
+  }
+
+  function showNextImage() {
+    setCurrentImageIndex((current) =>
+      current === images.length - 1 ? 0 : current + 1,
+    );
+  }
+
+  return (
+    <div className="soft-panel overflow-hidden rounded-2xl bg-slate-100 p-2 sm:rounded-3xl sm:p-3">
+      <div className="flex items-center gap-2 border-b border-slate-200 bg-white px-4 py-3">
+        <span className="h-3 w-3 rounded-full bg-red-300" />
+        <span className="h-3 w-3 rounded-full bg-yellow-300" />
+        <span className="h-3 w-3 rounded-full bg-green-300" />
+        <span className="ml-3 text-xs font-bold text-slate-400">
+          {feature.label}
+        </span>
+      </div>
+
+      <div className="relative aspect-[4/3] overflow-hidden rounded-b-2xl bg-white sm:aspect-[16/10]">
+        <Image
+          src={images[currentImageIndex]}
+          alt={`${feature.alt} ${currentImageIndex + 1}`}
+          fill
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          className="object-cover"
+        />
+
+        {hasMultipleImages ? (
+          <>
+            <button
+              type="button"
+              onClick={showPreviousImage}
+              aria-label="前の画像を表示"
+              className="absolute left-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-white/90 text-2xl font-bold text-slate-900 shadow-lg transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-blue-600"
+            >
+              ←
+            </button>
+            <button
+              type="button"
+              onClick={showNextImage}
+              aria-label="次の画像を表示"
+              className="absolute right-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-white/90 text-2xl font-bold text-slate-900 shadow-lg transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-blue-600"
+            >
+              →
+            </button>
+            <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 gap-2 rounded-full bg-slate-950/55 px-3 py-2">
+              {images.map((image, index) => (
+                <button
+                  key={image}
+                  type="button"
+                  onClick={() => setCurrentImageIndex(index)}
+                  aria-label={`${index + 1}枚目の画像を表示`}
+                  className={`h-2.5 w-2.5 rounded-full transition ${
+                    index === currentImageIndex ? "bg-white" : "bg-white/45"
+                  }`}
+                />
+              ))}
+            </div>
+          </>
+        ) : null}
+      </div>
+    </div>
   );
 }

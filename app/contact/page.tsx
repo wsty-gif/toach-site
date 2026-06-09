@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 
 const contactTopics = [
   {
-    title: "デモ・導入相談",
-    description: "実際の画面や導入イメージを確認できます。",
+    title: "導入相談",
+    description: "運用課題や導入イメージを相談できます。",
     src: "https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/relaxing_at_home_9tyc.svg",
     alt: "オンラインで相談しているイラスト",
   },
@@ -36,7 +36,7 @@ export default function ContactPage() {
       <PageLead
         eyebrow="Contact"
         title="お問い合わせ"
-        description="デモ・導入相談、サービス資料請求、料金確認など、どのような内容でもお気軽にお問い合わせください。"
+        description="導入相談、サービス資料請求、料金確認など、どのような内容でもお気軽にお問い合わせください。"
         illustration="contact"
       />
 
@@ -62,7 +62,7 @@ export default function ContactPage() {
               </h3>
 
               <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-600">
-                <li>・デモを見てみたい</li>
+                <li>・サービス内容を確認したい</li>
                 <li>・サービス資料がほしい</li>
                 <li>・料金を確認したい</li>
                 <li>・自社の運用に合うか相談したい</li>
@@ -74,7 +74,7 @@ export default function ContactPage() {
               {contactTopics.map((item) => (
                 <article
                   key={item.title}
-                  className="card-hover overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
+                  className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
                 >
                   <div className="relative h-32 bg-gradient-to-br from-white to-sky-50">
                     <Image

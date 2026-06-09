@@ -59,7 +59,7 @@ export default function OperationIllustration({ compact = false }: OperationIllu
 
               <div className="mt-6 grid gap-4">
                 {problems.map((item) => (
-                  <div key={item.title} className="card-hover rounded-2xl bg-white p-5 shadow-sm">
+                  <div key={item.title} className="rounded-2xl bg-white p-5 shadow-sm">
                     <div className="flex items-center gap-3">
                       <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-100 text-lg">
                         !
@@ -88,7 +88,7 @@ export default function OperationIllustration({ compact = false }: OperationIllu
 
               <div className="mt-6 grid gap-4">
                 {outcomes.map((item) => (
-                  <div key={item.title} className="card-hover rounded-2xl bg-white p-5 shadow-sm">
+                  <div key={item.title} className="rounded-2xl bg-white p-5 shadow-sm">
                     <div className="flex items-center gap-3">
                       <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-lg text-blue-700">
                         ✓

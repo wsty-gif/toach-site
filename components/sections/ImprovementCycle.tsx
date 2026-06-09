@@ -44,7 +44,7 @@ export default function ImprovementCycle() {
               {cycleItems.map((item, index) => (
                 <div
                   key={item.title}
-                  className="card-hover flex items-center gap-4 rounded-3xl bg-white p-5 shadow-sm"
+                  className="flex items-center gap-4 rounded-3xl bg-white p-5 shadow-sm"
                 >
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-700 text-sm font-black text-white">
                     {index + 1}

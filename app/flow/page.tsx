@@ -79,7 +79,7 @@ export default function FlowPage() {
             {flowSteps.map((step, index) => (
               <article
                 key={step.step}
-                className="card-hover grid gap-6 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:grid-cols-[180px_1fr] sm:items-center"
+                className="grid gap-6 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:grid-cols-[180px_1fr] sm:items-center"
               >
                 <div className="relative min-h-[140px] rounded-2xl bg-gradient-to-br from-white to-sky-50">
                   <Image

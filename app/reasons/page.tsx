@@ -68,7 +68,7 @@ export default function ReasonsPage() {
             {reasons.map((item, index) => (
               <article
                 key={item.title}
-                className="card-hover overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
+                className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
               >
                 <div className="relative h-52 bg-gradient-to-br from-white to-sky-50">
                   <Image

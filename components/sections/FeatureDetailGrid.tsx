@@ -22,7 +22,7 @@ export default function FeatureDetailGrid() {
             {serviceItems.map((item) => (
               <article
                 key={item.title}
-                className="card-hover rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
               >
                 <h3 className="text-xl font-bold text-slate-950">{item.title}</h3>
                 <p className="mt-4 leading-8 text-slate-600">
@@ -40,7 +40,7 @@ export default function FeatureDetailGrid() {
 
           <div className="reveal-stagger mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {serviceUseCases.map((item) => (
-              <article key={item.title} className="card-hover rounded-2xl bg-white p-6 shadow-sm">
+              <article key={item.title} className="rounded-2xl bg-white p-6 shadow-sm">
                 <h4 className="font-bold leading-8 text-slate-950">
                   {item.title}
                 </h4>

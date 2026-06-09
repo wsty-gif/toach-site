@@ -4,6 +4,29 @@ import {
   organizationChallenges,
 } from "@/lib/siteContent";
 
+const benefitDetails = [
+  {
+    label: "作業時間を減らす",
+    support: "手順・資料・タスクを一元化",
+  },
+  {
+    label: "ミスを減らす",
+    support: "期限・進捗・完了状況を可視化",
+  },
+  {
+    label: "育成を平準化する",
+    support: "教材・確認テストを仕組み化",
+  },
+  {
+    label: "ルールを定着させる",
+    support: "研修・確認履歴を残して管理",
+  },
+  {
+    label: "知識を活かす",
+    support: "ノウハウを蓄積して共有",
+  },
+] as const;
+
 export default function OrganizationSystemSection() {
   return (
     <section className="bg-white px-5 py-20 md:py-24">
@@ -25,7 +48,7 @@ export default function OrganizationSystemSection() {
               {organizationChallenges.map((item) => (
                 <div
                   key={item.title}
-                  className="card-hover rounded-2xl border border-slate-200 bg-slate-50 p-5"
+                  className="rounded-2xl border border-slate-200 bg-slate-50 p-5"
                 >
                   <h3 className="font-bold text-slate-950">{item.title}</h3>
                   <p className="mt-2 text-sm leading-7 text-slate-600">
@@ -41,7 +64,7 @@ export default function OrganizationSystemSection() {
               {operationPillars.map((item) => (
                 <article
                   key={item.step}
-                  className="card-hover rounded-2xl border border-blue-100 bg-blue-50/70 p-6"
+                  className="rounded-2xl border border-blue-100 bg-blue-50/70 p-6"
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-700 text-sm font-black text-white">
@@ -63,16 +86,47 @@ export default function OrganizationSystemSection() {
               ))}
             </div>
 
-            <div className="reveal-on-scroll mt-6 rounded-2xl bg-slate-950 p-6 text-white">
-              <h3 className="text-xl font-bold">導入で期待できる効果</h3>
-              <div className="mt-5 grid gap-4 sm:grid-cols-2">
-                {operationBenefits.map((item) => (
-                  <div key={item.title} className="border-t border-white/10 pt-4">
-                    <p className="font-bold text-blue-200">{item.title}</p>
-                    <p className="mt-2 text-sm leading-7 text-slate-300">
-                      {item.description}
-                    </p>
-                  </div>
+            <div className="reveal-on-scroll mt-6 rounded-2xl bg-slate-950 p-6 text-white md:p-7">
+              <div>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-blue-200">
+                    Benefits
+                  </p>
+                  <h3 className="mt-2 text-2xl font-bold">
+                    導入で期待できる効果
+                  </h3>
+                </div>
+                <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-300">
+                  現場の手順、タスク、教育をつなげることで、日々の運用を改善しやすくします。
+                </p>
+              </div>
+
+              <div className="mt-6 grid gap-3">
+                {operationBenefits.map((item, index) => (
+                  <article
+                    key={item.title}
+                    className="grid gap-4 rounded-2xl border border-white/10 bg-white/[0.06] p-4 sm:grid-cols-[44px_1fr] sm:items-start"
+                  >
+                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-blue-500 text-sm font-black text-white">
+                      {String(index + 1).padStart(2, "0")}
+                    </div>
+                    <div>
+                      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                        <h4 className="text-lg font-bold text-white">
+                          {item.title}
+                        </h4>
+                        <p className="w-fit rounded-full bg-blue-400/15 px-3 py-1 text-xs font-bold text-blue-100">
+                          {benefitDetails[index].label}
+                        </p>
+                      </div>
+                      <p className="mt-2 text-sm leading-7 text-slate-300">
+                        {item.description}
+                      </p>
+                      <p className="mt-3 border-l-2 border-blue-300 pl-3 text-sm font-bold leading-6 text-blue-100">
+                        {benefitDetails[index].support}
+                      </p>
+                    </div>
+                  </article>
                 ))}
               </div>
             </div>

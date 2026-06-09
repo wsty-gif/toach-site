@@ -88,7 +88,7 @@ const purposeOptions = [
   "導入に向けて選定をしている",
   "サービスに興味があり、情報収集をしている",
   "サービス資料がほしい",
-  "デモ・導入相談をしたい",
+  "導入について相談したい",
   "他社への紹介",
   "利用は考えていない",
   "その他",
@@ -97,8 +97,8 @@ const purposeOptions = [
 function getInitialInquiryType(type: string | null) {
   if (type === "pricing") return "料金について相談する";
   if (type === "document") return "サービス資料を請求する";
-  if (type === "demo") return "デモ・導入相談を申し込む";
-  return "デモ・導入相談を申し込む";
+  if (type === "consultation") return "導入相談を申し込む";
+  return "導入相談を申し込む";
 }
 
 export default function ContactForm() {
@@ -206,7 +206,7 @@ export default function ContactForm() {
             required
             className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3"
           >
-            <option value="デモ・導入相談を申し込む">デモ・導入相談を申し込む</option>
+            <option value="導入相談を申し込む">導入相談を申し込む</option>
             <option value="サービス資料を請求する">サービス資料を請求する</option>
             <option value="料金について相談する">料金について相談する</option>
             <option value="その他">その他</option>
