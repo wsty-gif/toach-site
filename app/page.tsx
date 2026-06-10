@@ -137,6 +137,19 @@ const featureGroups = [
       "進捗の見える化",
     ],
   },
+  {
+    category: "多言語対応",
+    description: "日本語で作成したコンテンツを自動翻訳し、外国人スタッフにも同じ内容を共有できます。",
+    illustration: "support",
+    features: [
+      "12言語対応",
+      "日本語コンテンツの自動翻訳",
+      "外国人スタッフへの共有",
+      "教育内容の統一",
+      "現場理解の補助",
+      "多拠点展開",
+    ],
+  },
 ] as const;
 
 const benefits = [

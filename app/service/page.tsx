@@ -35,6 +35,10 @@ const serviceItemVisuals = [
     src: "https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/book_lover_mkck.svg",
     alt: "教材を読んで学習しているイラスト",
   },
+  {
+    src: "https://cdn.undraw.co/illustrations/team-collaboration_phnf.svg",
+    alt: "多言語でチームに共有するイラスト",
+  },
 ] as const;
 
 const serviceUseCaseVisuals = [
