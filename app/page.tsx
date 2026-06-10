@@ -11,14 +11,28 @@ import {
   siteConfig,
 } from "@/lib/siteContent";
 
-const problems = [
-  "マニュアルや社内資料が散在して、必要な情報がすぐに見つからない",
-  "業務の進め方が人によって違い、品質にばらつきが出る",
-  "新人教育やOJTに時間がかかり、教育担当の負担が大きい",
-  "やるべきことの抜け漏れや、確認漏れが発生してしまう",
-  "コンプライアンス研修や社内ルールの運用・管理が大変",
-  "本当に理解・定着できているかを確認できず、不安が残る",
-];
+const problemPersonas = [
+  {
+    title: "管理者・本部のあなた",
+    image: "https://cdn.undraw.co/illustrations/questions_g2px.svg",
+    alt: "疑問を持つビジネスパーソンのイラスト",
+    items: [
+      ["資料が散在", "必要な情報を探す時間が増えている"],
+      ["確認が大変", "誰が見たか、実施したかを追いきれない"],
+      ["運用が属人化", "担当者ごとに進め方が変わってしまう"],
+    ],
+  },
+  {
+    title: "現場・教育担当のあなた",
+    image: "https://cdn.undraw.co/illustrations/problem-solving_8lg7.svg",
+    alt: "課題を整理している人物のイラスト",
+    items: [
+      ["教育に時間がかかる", "新人や異動者への説明が毎回発生する"],
+      ["抜け漏れが起きる", "やるべきことや期限を見落としやすい"],
+      ["定着が見えない", "研修後に理解できたか確認しづらい"],
+    ],
+  },
+] as const;
 
 const pillars = [
   {
@@ -310,19 +324,47 @@ export default function Home() {
           <SectionTitle
             eyebrow="Problem"
             title="組織でこんなお悩みありませんか？"
-            description="パンフレットの訴求をもとに、情報管理・教育・実行確認で起こりやすい課題を整理しました。"
+            description="情報管理・教育・実行確認で起こりやすい課題を、立場ごとに整理しました。"
           />
 
-          <div className="reveal-stagger mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {problems.map((item, index) => (
+          <div className="reveal-stagger mt-10 grid gap-6 lg:grid-cols-2">
+            {problemPersonas.map((persona) => (
               <article
-                key={item}
-                className="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm"
+                key={persona.title}
+                className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
               >
-                <p className="text-sm font-bold text-blue-700">
-                  ISSUE {String(index + 1).padStart(2, "0")}
-                </p>
-                <p className="mt-3 leading-8 text-slate-800">{item}</p>
+                <div className="border-b border-slate-100 bg-slate-50 px-6 py-5 text-center">
+                  <h3 className="text-2xl font-bold text-slate-950">
+                    {persona.title}
+                  </h3>
+                </div>
+                <div className="grid gap-5 p-5 sm:grid-cols-[170px_1fr] sm:items-center">
+                  <div className="relative min-h-[210px] rounded-2xl bg-blue-50">
+                    <Image
+                      src={persona.image}
+                      alt={persona.alt}
+                      fill
+                      sizes="(min-width: 1024px) 170px, 80vw"
+                      className="object-contain p-4"
+                      unoptimized
+                    />
+                  </div>
+                  <div className="grid gap-3">
+                    {persona.items.map(([label, text]) => (
+                      <div
+                        key={label}
+                        className="relative rounded-2xl bg-white p-4 shadow-md shadow-slate-200/80 ring-1 ring-slate-100 sm:before:absolute sm:before:left-[-10px] sm:before:top-1/2 sm:before:h-5 sm:before:w-5 sm:before:-translate-y-1/2 sm:before:rotate-45 sm:before:bg-white sm:before:ring-1 sm:before:ring-slate-100"
+                      >
+                        <p className="text-sm font-bold text-blue-700">
+                          {label}
+                        </p>
+                        <p className="mt-1 text-sm font-bold leading-7 text-slate-800">
+                          {text}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </article>
             ))}
           </div>
