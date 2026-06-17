@@ -37,15 +37,15 @@ export default function CasesPage() {
         illustration="case"
       />
 
-      <section className="px-4 py-14 sm:px-5 sm:py-16 md:py-20">
+      <section className="section-soft px-4 py-14 sm:px-5 sm:py-16 md:py-20">
         <div className="mx-auto grid max-w-6xl gap-8">
           {caseStudies.map((item, index) => (
             <article
               key={item.title}
-              className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm sm:rounded-3xl"
+              className="note-card overflow-hidden"
             >
               <div className="grid gap-6 p-6 sm:p-8 lg:grid-cols-[240px_1fr] lg:items-center">
-                <div className="relative min-h-[180px] rounded-3xl bg-gradient-to-br from-white to-sky-50">
+                <div className="relative min-h-[180px] rounded-lg bg-[#f7fbff]">
                   <Image
                     src={caseVisuals[index].src}
                     alt={caseVisuals[index].alt}
@@ -56,7 +56,7 @@ export default function CasesPage() {
                   />
                 </div>
                 <div>
-                  <p className="font-bold text-blue-700">{item.industry}</p>
+                  <p className="font-bold text-[#0072ce]">{item.industry}</p>
                   <h2 className="mt-4 text-2xl font-bold leading-tight text-slate-950">
                     {item.title}
                   </h2>
@@ -64,8 +64,8 @@ export default function CasesPage() {
               </div>
 
               <div className="grid gap-6 px-6 pb-6 sm:px-8 sm:pb-8 md:grid-cols-2">
-                <div className="rounded-2xl bg-red-50 p-6">
-                  <h3 className="font-bold text-red-800">Before</h3>
+                <div className="rounded-lg bg-[#fff7d6] p-6">
+                  <h3 className="font-bold text-slate-950">Before</h3>
                   <ul className="mt-4 space-y-2 text-slate-700">
                     {item.before.map((text) => (
                       <li key={text}>・{text}</li>
@@ -73,8 +73,8 @@ export default function CasesPage() {
                   </ul>
                 </div>
 
-                <div className="rounded-2xl bg-blue-50 p-6">
-                  <h3 className="font-bold text-blue-800">After</h3>
+                <div className="rounded-lg bg-[#f7fbff] p-6">
+                  <h3 className="font-bold text-slate-950">After</h3>
                   <ul className="mt-4 space-y-2 text-slate-700">
                     {item.after.map((text) => (
                       <li key={text}>・{text}</li>

@@ -23,24 +23,24 @@ export default function CompanyPage() {
         illustrationCaption="運営会社の基本情報をご確認いただけます。"
       />
 
-      <section className="px-5 py-20 md:py-24">
+      <section className="section-soft px-5 py-20 md:py-24">
         <div className="mx-auto max-w-5xl">
           <div className="mb-10">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
+            <p className="section-marker text-sm">
               Profile
             </p>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-slate-950 md:text-5xl">
               企業概要
             </h2>
           </div>
 
-          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+          <div className="note-card overflow-hidden">
             {companyProfileRows.map(([label, value]) => (
               <div
                 key={label}
-                className="grid border-b border-slate-200 last:border-b-0 md:grid-cols-[240px_1fr]"
+                className="grid border-b border-slate-100 last:border-b-0 md:grid-cols-[240px_1fr]"
               >
-                <div className="bg-slate-50 p-5 font-bold text-slate-950">
+                <div className="bg-[#f7fbff] p-5 font-bold text-slate-950">
                   {label}
                 </div>
                 <div className="p-5 leading-8 text-slate-700">

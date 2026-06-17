@@ -40,14 +40,14 @@ export default function ContactPage() {
         illustration="contact"
       />
 
-      <section className="px-5 py-20 md:py-24">
+      <section className="section-soft px-5 py-20 md:py-24">
         <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
+            <p className="section-marker text-sm">
               Form
             </p>
 
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
+            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-slate-950 md:text-4xl">
               必要事項をご入力ください。
             </h2>
 
@@ -56,7 +56,7 @@ export default function ContactPage() {
               まだ導入を決めていない段階でも問題ありません。
             </p>
 
-            <div className="mt-8 rounded-3xl bg-slate-50 p-6">
+            <div className="note-card mt-8 p-6">
               <h3 className="font-bold text-slate-950">
                 このようなご相談を受け付けています
               </h3>
@@ -74,9 +74,9 @@ export default function ContactPage() {
               {contactTopics.map((item) => (
                 <article
                   key={item.title}
-                  className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
+                  className="note-card overflow-hidden"
                 >
-                  <div className="relative h-32 bg-gradient-to-br from-white to-sky-50">
+                  <div className="relative h-32 bg-[#f7fbff]">
                     <Image
                       src={item.src}
                       alt={item.alt}
@@ -96,9 +96,9 @@ export default function ContactPage() {
               ))}
             </div>
 
-            <div className="mt-6 rounded-3xl bg-blue-700 p-6 text-white">
+            <div className="note-card mt-6 bg-[#f7fbff] p-6">
               <h3 className="font-bold">無理な営業は行いません</h3>
-              <p className="mt-3 text-sm leading-7 text-blue-100">
+              <p className="mt-3 text-sm leading-7 text-slate-600">
                 お問い合わせいただいたからといって、すぐに導入を決める必要はありません。
                 比較検討中の方も安心してご相談ください。
               </p>
@@ -110,7 +110,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <Suspense fallback={<div className="rounded-3xl bg-slate-50 p-8">フォームを読み込んでいます...</div>}>
+          <Suspense fallback={<div className="note-card p-8">フォームを読み込んでいます...</div>}>
             <ContactForm />
           </Suspense>
         </div>

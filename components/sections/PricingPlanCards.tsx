@@ -3,13 +3,13 @@ import { pricingPlans } from "@/lib/siteContent";
 
 export default function PricingPlanCards() {
   return (
-    <section className="bg-slate-50 px-5 py-20 md:py-24">
+    <section className="section-soft px-5 py-20 md:py-24">
       <div className="mx-auto max-w-6xl">
         <div className="text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
+          <p className="section-marker text-sm">
             Plans
           </p>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-5xl">
+          <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-slate-950 md:text-5xl">
             利用範囲に合わせて選べるプラン
           </h2>
           <p className="mx-auto mt-6 max-w-3xl leading-9 text-slate-600">
@@ -21,19 +21,19 @@ export default function PricingPlanCards() {
           {pricingPlans.map((plan) => (
             <article
               key={plan.name}
-              className={`relative rounded-3xl border bg-white p-7 shadow-sm ${
+              className={`relative note-card p-7 ${
                 plan.recommended
-                  ? "border-blue-600 ring-4 ring-blue-100"
-                  : "border-slate-200"
+                  ? "ring-2 ring-blue-100"
+                  : ""
               }`}
             >
               {plan.recommended ? (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-blue-700 px-5 py-2 text-xs font-bold text-white">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-[#0072ce] px-5 py-2 text-xs font-bold text-white">
                   最もおすすめ
                 </div>
               ) : null}
 
-              <p className="text-sm font-bold text-blue-700">{plan.badge}</p>
+              <p className="text-sm font-bold text-[#0072ce]">{plan.badge}</p>
 
               <h3 className="mt-4 text-2xl font-bold text-slate-950">
                 {plan.name}
@@ -47,18 +47,18 @@ export default function PricingPlanCards() {
                 {plan.lead}
               </p>
 
-              <Link
-                href={plan.ctaHref}
-                className={`mt-7 inline-flex w-full items-center justify-center rounded-full px-6 py-4 font-bold transition ${
-                  plan.recommended
-                    ? "bg-blue-700 text-white hover:bg-blue-800"
+                <Link
+                  href={plan.ctaHref}
+                  className={`mt-7 inline-flex w-full items-center justify-center rounded-full px-6 py-4 font-bold transition ${
+                    plan.recommended
+                    ? "bg-[#0072ce] text-white hover:bg-[#004f9f]"
                     : "border border-slate-300 bg-white text-slate-950 hover:bg-slate-50"
                 }`}
               >
                 {plan.ctaLabel}
               </Link>
 
-              <div className="mt-8 border-t border-slate-200 pt-6">
+              <div className="mt-8 border-t border-slate-100 pt-6">
                 <p className="text-sm font-bold text-slate-950">主な内容</p>
                 <ul className="mt-4 grid gap-3">
                   {plan.highlights.map((item) => (

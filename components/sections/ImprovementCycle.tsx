@@ -23,14 +23,14 @@ const cycleItems = [
 
 export default function ImprovementCycle() {
   return (
-    <section className="bg-white px-5 py-20 md:py-24">
+    <section className="section-soft px-5 py-20 md:py-24">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="eyebrow-pill text-sm font-bold uppercase tracking-[0.2em]">
+            <p className="section-marker text-sm">
               Cycle
             </p>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-slate-950 md:text-5xl">
               作って終わりではなく、改善が続く状態へ。
             </h2>
             <p className="mt-6 leading-9 text-slate-600">
@@ -39,14 +39,14 @@ export default function ImprovementCycle() {
             </p>
           </div>
 
-          <div className="relative rounded-[2rem] bg-blue-50 p-6 shadow-inner md:p-10">
+          <div className="relative note-card bg-[#f7fbff] p-6 md:p-10">
             <div className="reveal-stagger grid gap-4">
               {cycleItems.map((item, index) => (
                 <div
                   key={item.title}
-                  className="flex items-center gap-4 rounded-3xl bg-white p-5 shadow-sm"
+                  className="flex items-center gap-4 note-card p-5"
                 >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-700 text-sm font-black text-white">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#0072ce] text-sm font-black text-white">
                     {index + 1}
                   </div>
 
@@ -60,7 +60,7 @@ export default function ImprovementCycle() {
               ))}
             </div>
 
-            <div className="absolute -right-4 -top-4 hidden rounded-full bg-slate-950 px-5 py-3 text-sm font-bold text-white md:block">
+            <div className="absolute -right-4 -top-4 hidden rounded-full bg-[#0072ce] px-5 py-3 text-sm font-bold text-white md:block">
               改善サイクル
             </div>
           </div>

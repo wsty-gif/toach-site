@@ -47,14 +47,14 @@ export default function ReasonsPage() {
 
       <OperationIllustration />
 
-      <section className="px-5 py-20 md:py-24">
+      <section className="section-soft px-5 py-20 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
+            <p className="section-marker text-sm">
               Difference
             </p>
 
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-slate-950 md:text-5xl">
               競合との違いは、運用まで見据えていること。
             </h2>
 
@@ -68,9 +68,9 @@ export default function ReasonsPage() {
             {reasons.map((item, index) => (
               <article
                 key={item.title}
-                className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
+                className="note-card overflow-hidden"
               >
-                <div className="relative h-52 bg-gradient-to-br from-white to-sky-50">
+                <div className="relative h-52 bg-[#f7fbff]">
                   <Image
                     src={reasonVisuals[index].src}
                     alt={reasonVisuals[index].alt}
@@ -81,7 +81,7 @@ export default function ReasonsPage() {
                   />
                 </div>
                 <div className="p-8">
-                  <p className="text-sm font-bold text-blue-700">
+                  <p className="text-sm font-bold text-[#0072ce]">
                     REASON {String(index + 1).padStart(2, "0")}
                   </p>
                   <h3 className="mt-2 text-2xl font-bold text-slate-950">
@@ -99,13 +99,13 @@ export default function ReasonsPage() {
 
       <ImprovementCycle />
 
-      <section className="bg-blue-700 px-5 py-20 text-white">
+      <section className="section-soft px-5 py-20">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold md:text-4xl">
+          <h2 className="text-3xl font-bold leading-tight text-slate-950 md:text-4xl">
             無理な営業はしません。
           </h2>
 
-          <p className="mt-6 leading-8 text-blue-100">
+          <p className="mt-6 leading-8 text-slate-600">
             現在の運用を伺い、必要な情報を分かりやすくお伝えします。
             比較検討中の段階でも安心してご相談ください。
           </p>
