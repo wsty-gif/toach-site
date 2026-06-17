@@ -36,7 +36,7 @@ export default function ContactPage() {
       <PageLead
         eyebrow="Contact"
         title="お問い合わせ"
-        description="導入相談、サービス資料請求、料金確認など、どのような内容でもお気軽にお問い合わせください。"
+        description="導入相談、サービス資料請求、料金確認など、気になることがあればそのままお送りください。"
         illustration="contact"
       />
 
@@ -52,8 +52,8 @@ export default function ContactPage() {
             </h2>
 
             <p className="mt-6 leading-9 text-slate-600">
-              送信いただいた内容は、担当者が確認し、通常1〜2営業日以内にご連絡します。
-              まだ導入を決めていない段階でも問題ありません。
+              送信いただいた内容は担当者が確認し、通常1〜2営業日以内にご連絡します。
+              まだ導入を決めていない段階でも大丈夫です。
             </p>
 
             <div className="mt-8 rounded-3xl bg-slate-50 p-6">
@@ -100,7 +100,7 @@ export default function ContactPage() {
               <h3 className="font-bold">無理な営業は行いません</h3>
               <p className="mt-3 text-sm leading-7 text-blue-100">
                 お問い合わせいただいたからといって、すぐに導入を決める必要はありません。
-                比較検討中の方も安心してご相談ください。
+                比較検討中の方も、そのまま相談していただけます。
               </p>
             </div>
 

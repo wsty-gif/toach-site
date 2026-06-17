@@ -41,7 +41,7 @@ export default function ReasonsPage() {
       <PageLead
         eyebrow="Reasons"
         title="TOACHが選ばれる理由"
-        description="現場で使い続けられることを大切に、伝達から実施、承認、教育までを一つにつなげます。"
+        description="現場で使い続けやすいかを大事にして、伝達から実施、承認、教育までをまとめています。"
         illustration="reason"
       />
 
@@ -59,8 +59,8 @@ export default function ReasonsPage() {
             </h2>
 
             <p className="mt-6 leading-9 text-slate-600">
-              単なるマニュアル置き場ではなく、タスク配信、実施報告、承認、教育履歴までをつなげて管理できます。
-              現場で実際に使い続けられるよう、分かりやすさと定着支援を重視しています。
+              ただ置いておくだけのマニュアルではなく、配信したタスクや実施報告、承認の履歴まで残せます。
+              現場でそのまま使い続けやすいかを基準に、画面や流れを整えています。
             </p>
           </div>
 
@@ -106,15 +106,15 @@ export default function ReasonsPage() {
           </h2>
 
           <p className="mt-6 leading-8 text-blue-100">
-            現在の運用を伺い、必要な情報を分かりやすくお伝えします。
-            比較検討中の段階でも安心してご相談ください。
+            今のやり方を聞いたうえで、必要なところだけをお伝えします。
+            比較している途中でも、気軽に声をかけてください。
           </p>
         </div>
       </section>
 
       <CtaSection
         title="TOACHが自社に合うか確認してみませんか？"
-        description="現場の課題や管理方法を伺いながら、どのように運用を整えられるかをご案内します。"
+        description="現場の課題や今の管理方法を聞きながら、TOACHで触れられるところを一緒に確認します。"
       />
 
       <Footer />

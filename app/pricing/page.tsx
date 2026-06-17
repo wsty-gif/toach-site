@@ -13,7 +13,7 @@ import ProductFlowIllustration from "@/components/sections/ProductFlowIllustrati
 export const metadata: Metadata = {
   title: "料金プラン",
   description:
-    "TOACHの料金プランをご紹介します。マニュアル管理、タスク配信、承認、ラーニング、ユーザー管理をまとめた基本プランを個別にご案内します。",
+    "TOACHの料金プランをご紹介します。マニュアル管理、タスク配信、承認、ラーニング、ユーザー管理をまとめた基本プランです。",
 };
 
 const priceImageCards = [
@@ -51,7 +51,7 @@ export default function PricingPage() {
       <PageLead
         eyebrow="Pricing"
         title="料金プラン"
-        description="TOACHは、必要な機能をまとめた1つの基本プランでご案内しています。利用人数による料金変動はありません。"
+        description="TOACHは、必要な機能をまとめた1つの基本プランです。利用人数で料金が変わることはありません。"
         illustration="pricing"
       />
 
@@ -70,7 +70,7 @@ export default function PricingPage() {
 
                 <p className="mt-4 leading-8 text-slate-600">
                   マニュアル管理、タスク配信、承認、ラーニング、ユーザー管理までまとめて利用できます。
-                  導入支援や個別対応が必要な場合は、内容を確認したうえでご案内します。
+                  導入支援や個別対応が必要な場合は、内容を確認したうえでお伝えします。
                 </p>
               </div>
 
@@ -91,24 +91,24 @@ export default function PricingPage() {
 
       <PricingFeatureDiagram />
 
-      <section className="bg-slate-950 px-5 py-20 text-white md:py-24">
+      <section className="bg-[#f7fbff] px-5 py-20 md:py-24">
         <div className="mx-auto max-w-6xl">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-300">
-            Price Image
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
+            Pricing Details
           </p>
 
-          <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-5xl">
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-5xl">
             料金は、基本プランをもとに個別にご案内します。
           </h2>
 
-          <p className="mt-6 max-w-3xl leading-9 text-slate-300">
-            現時点ではオプションメニューを細かく分けず、基本プランの中で必要な機能をまとめてご案内します。
+          <p className="mt-6 max-w-3xl leading-9 text-slate-600">
+            現時点ではオプションメニューを細かく分けず、基本プランの中で必要な機能をまとめて扱います。
             利用人数が増えても、人数を理由に月額費用が変わることはありません。
           </p>
 
           <div className="reveal-stagger mt-12 grid gap-6 md:grid-cols-3">
             {priceImageCards.map((card) => (
-              <article key={card.title} className="rounded-3xl bg-white/10 p-5">
+              <article key={card.title} className="rounded-3xl bg-white p-5 shadow-sm">
                 <div className="relative h-36 rounded-2xl bg-white">
                   <Image
                     src={card.src}
@@ -119,11 +119,11 @@ export default function PricingPage() {
                     unoptimized
                   />
                 </div>
-                <p className="mt-5 text-sm font-bold text-blue-200">
+                <p className="mt-5 text-sm font-bold text-blue-700">
                   {card.number}
                 </p>
-                <h3 className="mt-3 text-xl font-bold">{card.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-slate-300">
+                <h3 className="mt-3 text-xl font-bold text-slate-950">{card.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-slate-600">
                   {card.description}
                 </p>
               </article>
@@ -136,7 +136,7 @@ export default function PricingPage() {
 
       <CtaSection
         title="自社で使う場合の費用感を確認しませんか？"
-        description="利用人数による料金変動はありません。現在の運用や導入時に必要な支援を伺いながら、費用感をご案内します。"
+        description="利用人数による料金変動はありません。現在の運用や導入時に必要な支援を聞きながら、費用感をお伝えします。"
       />
 
       <Footer />
