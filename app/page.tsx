@@ -239,14 +239,14 @@ function SectionTitle({
 
   return (
     <div className={center ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
-      <p className={`eyebrow-pill text-sm font-bold uppercase tracking-[0.2em] ${center ? "mx-auto" : ""}`}>
+      <p className={`section-marker text-sm ${center ? "mx-auto" : ""}`}>
         {eyebrow}
       </p>
-      <h2 className={`mt-5 text-3xl font-bold tracking-tight md:text-5xl ${titleColor}`}>
+      <h2 className={`mt-4 text-3xl font-bold leading-tight tracking-tight md:text-5xl ${titleColor}`}>
         {title}
       </h2>
       {description ? (
-        <p className={`mt-5 leading-9 ${descriptionColor}`}>{description}</p>
+        <p className={`mt-5 text-base leading-9 md:text-lg ${descriptionColor}`}>{description}</p>
       ) : null}
     </div>
   );
@@ -257,44 +257,46 @@ export default function Home() {
     <main>
       <Navbar />
 
-      <section className="relative overflow-hidden bg-[linear-gradient(135deg,#e0f2fe_0%,#ffffff_48%,#f0fdf4_100%)] px-5 py-16 md:py-24">
-        <div className="relative mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
+      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f1f8ff_0%,#ffffff_64%,#fff8dc_100%)] px-5 pb-14 pt-12 md:pb-20 md:pt-18">
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-[linear-gradient(180deg,rgba(255,255,255,0),#ffffff)]" aria-hidden="true" />
+        <div className="relative mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.98fr_1.02fr] lg:items-center">
           <div>
-            <p className="eyebrow-pill text-sm font-bold tracking-[0.16em]">
+            <p className="eyebrow-pill text-sm font-bold">
               {siteConfig.tagline}
             </p>
 
-            <h1 className="mt-7 max-w-2xl text-4xl font-bold leading-tight tracking-tight text-slate-950 sm:text-5xl md:text-6xl">
-              伝えた業務を、
+            <h1 className="mt-7 max-w-2xl text-[2.55rem] font-bold leading-tight tracking-tight text-slate-950 sm:text-5xl md:text-6xl">
+              現場のやること、
               <br />
-              実施されるところまで。
+              すぐ伝わる。
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-700 md:text-lg md:leading-9">
-              TOACHは、マニュアル・タスク・承認・教育を一元管理し、
-              現場の標準化から実行、定着までをつなぐクラウドサービスです。
+              TOACHは、マニュアル・タスク・承認・教育をひとつにまとめる
+              現場運用プラットフォームです。探す、伝える、確認する手間を減らし、
+              業務の標準化から定着までを支えます。
             </p>
 
             <div className="mt-9 grid gap-3 sm:flex sm:flex-wrap">
               <Link
                 href={primaryCta.href}
-                className="rounded-full bg-gradient-to-r from-blue-700 to-sky-600 px-7 py-4 text-center font-bold text-white shadow-xl shadow-blue-700/20 transition hover:from-blue-800 hover:to-blue-700"
+                className="rounded-full bg-[#0b74de] px-7 py-4 text-center font-bold text-white shadow-xl shadow-blue-700/20 transition hover:bg-[#074c9f]"
               >
                 {primaryCta.label}
               </Link>
               <Link
                 href={secondaryCta.href}
-                className="rounded-full border border-slate-300 bg-white px-7 py-4 text-center font-bold text-slate-900 transition hover:bg-slate-50"
+                className="rounded-full border border-blue-200 bg-white px-7 py-4 text-center font-bold text-[#0b74de] transition hover:bg-blue-50"
               >
                 {secondaryCta.label}
               </Link>
             </div>
 
             <div className="mt-10 grid max-w-xl grid-cols-3 gap-3 text-sm">
-              {["標準化", "実行管理", "教育定着"].map((item) => (
+              {["マニュアル", "タスク", "ラーニング"].map((item) => (
                 <div
                   key={item}
-                  className="soft-panel rounded-2xl px-4 py-3 text-center font-bold text-slate-700"
+                  className="note-card px-4 py-3 text-center font-bold text-slate-700"
                 >
                   {item}
                 </div>
@@ -302,37 +304,59 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="soft-panel relative rounded-[2rem] p-5 md:p-6">
-            <div className="rounded-[1.5rem] bg-slate-950 p-6 text-white shadow-2xl shadow-slate-950/20">
-                <div className="flex items-center justify-between gap-4">
-                  <p className="text-sm font-bold text-blue-200">TOACH Dashboard</p>
-                  <span className="rounded-full bg-white/10 px-3 py-1 text-xs text-blue-100">
-                    Live
+          <div className="relative">
+            <div className="note-card relative overflow-hidden p-4 md:p-5">
+              <div className="rounded-lg border border-blue-100 bg-white">
+                <div className="flex items-center justify-between border-b border-blue-100 px-4 py-3">
+                  <p className="text-sm font-bold text-[#0b74de]">TOACH Workspace</p>
+                  <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700">
+                    運用中
                   </span>
                 </div>
-                <div className="mt-6 grid gap-3">
-                  {["マニュアル確認", "タスク完了", "承認待ち", "教育進捗"].map((item) => (
-                    <div
-                      key={item}
-                      className="flex items-center justify-between rounded-2xl border border-white/5 bg-white/10 p-4"
-                    >
-                      <span>{item}</span>
-                      <span className="rounded-full bg-blue-400/20 px-3 py-1 text-xs text-blue-100">
-                        管理中
-                      </span>
+                <div className="grid gap-4 p-4 md:grid-cols-[1fr_170px]">
+                  <div className="grid gap-3">
+                    {[
+                      ["新人研修マニュアル", "確認 92%"],
+                      ["月次点検タスク", "完了 34/40"],
+                      ["承認待ちレポート", "7件"],
+                    ].map(([item, status]) => (
+                      <div
+                        key={item}
+                        className="flex items-center justify-between rounded-lg border border-slate-100 bg-slate-50 px-4 py-3"
+                      >
+                        <span className="font-bold text-slate-800">{item}</span>
+                        <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-[#0b74de]">
+                          {status}
+                        </span>
+                      </div>
+                    ))}
+                    <div className="rounded-lg bg-[#0b74de] p-5 text-white">
+                      <p className="text-sm text-blue-100">今月の確認状況</p>
+                      <p className="mt-2 text-4xl font-bold">87%</p>
                     </div>
-                  ))}
+                  </div>
+                  <div className="relative min-h-[220px] rounded-lg bg-[#fff4c7]">
+                    <Image
+                      src="https://cdn.undraw.co/illustrations/teamwork_8val.svg"
+                      alt="チームで業務を進めるイラスト"
+                      fill
+                      sizes="(min-width: 1024px) 170px, 80vw"
+                      className="object-contain p-4"
+                      unoptimized
+                    />
+                  </div>
                 </div>
-                <div className="mt-6 rounded-2xl bg-gradient-to-r from-blue-500 to-sky-400 p-5">
-                  <p className="text-sm text-blue-100">今月の確認状況</p>
-                  <p className="mt-2 text-3xl font-bold">87%</p>
-                </div>
+              </div>
+            </div>
+            <div className="note-card absolute -bottom-6 left-5 hidden w-52 p-4 md:block">
+              <p className="text-xs font-bold text-slate-500">本日の対応漏れ</p>
+              <p className="mt-1 text-2xl font-bold text-[#19b37a]">0件</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-white px-5 py-20 md:py-24">
+      <section className="yellow-band px-5 py-20 md:py-24">
         <div className="mx-auto max-w-6xl">
           <SectionTitle
             eyebrow="Problem"
@@ -344,15 +368,15 @@ export default function Home() {
             {problemPersonas.map((persona) => (
               <article
                 key={persona.title}
-                className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
+                className="note-card overflow-hidden"
               >
-                <div className="border-b border-slate-100 bg-slate-50 px-6 py-5 text-center">
+                <div className="border-b border-blue-100 bg-white px-6 py-5 text-center">
                   <h3 className="text-2xl font-bold text-slate-950">
                     {persona.title}
                   </h3>
                 </div>
                 <div className="grid gap-5 p-5 sm:grid-cols-[170px_1fr] sm:items-center">
-                  <div className="relative min-h-[210px] rounded-2xl bg-blue-50">
+                  <div className="relative min-h-[210px] rounded-lg bg-[#f1f8ff]">
                     <Image
                       src={persona.image}
                       alt={persona.alt}
@@ -366,9 +390,9 @@ export default function Home() {
                     {persona.items.map(([label, text]) => (
                       <div
                         key={label}
-                        className="relative rounded-2xl bg-white p-4 shadow-md shadow-slate-200/80 ring-1 ring-slate-100 sm:before:absolute sm:before:left-[-10px] sm:before:top-1/2 sm:before:h-5 sm:before:w-5 sm:before:-translate-y-1/2 sm:before:rotate-45 sm:before:bg-white sm:before:ring-1 sm:before:ring-slate-100"
+                        className="relative rounded-lg bg-white p-4 shadow-md shadow-slate-200/80 ring-1 ring-blue-100 sm:before:absolute sm:before:left-[-10px] sm:before:top-1/2 sm:before:h-5 sm:before:w-5 sm:before:-translate-y-1/2 sm:before:rotate-45 sm:before:bg-white sm:before:ring-1 sm:before:ring-blue-100"
                       >
-                        <p className="text-sm font-bold text-blue-700">
+                        <p className="text-sm font-bold text-[#0b74de]">
                           {label}
                         </p>
                         <p className="mt-1 text-sm font-bold leading-7 text-slate-800">
@@ -384,7 +408,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-b from-slate-50 to-white px-5 py-20 md:py-24">
+      <section className="bg-white px-5 py-20 md:py-24">
         <div className="mx-auto max-w-6xl">
           <SectionTitle
             eyebrow="Concept"
@@ -397,11 +421,11 @@ export default function Home() {
             {pillars.map((item) => (
               <article
                 key={item.title}
-                className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
+                className="note-card overflow-hidden"
               >
                 <ToachSceneIllustration variant={item.illustration} className="h-48" />
                 <div className="p-7">
-                  <p className="text-sm font-bold text-blue-700">{item.subtitle}</p>
+                  <p className="text-sm font-bold text-[#0b74de]">{item.subtitle}</p>
                   <h3 className="mt-2 text-2xl font-bold text-slate-950">
                     {item.title}
                   </h3>
@@ -413,7 +437,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white px-5 py-20 md:py-24">
+      <section className="bg-[#f7fbff] px-5 py-20 md:py-24">
         <div className="mx-auto max-w-6xl">
           <SectionTitle
             eyebrow="All Features"
@@ -425,7 +449,7 @@ export default function Home() {
             {featureGroups.map((group) => (
               <article
                 key={group.category}
-                className="grid gap-5 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:grid-cols-[150px_1fr]"
+                className="note-card grid gap-5 p-5 sm:grid-cols-[150px_1fr]"
               >
                 <ToachSceneIllustration
                   variant={group.illustration}
@@ -442,7 +466,7 @@ export default function Home() {
                     {group.features.map((feature) => (
                       <span
                         key={feature}
-                        className="rounded-full bg-blue-50 px-3 py-1.5 text-xs font-bold text-blue-800"
+                        className="rounded-full bg-blue-50 px-3 py-1.5 text-xs font-bold text-[#0b74de]"
                       >
                         {feature}
                       </span>
@@ -455,7 +479,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-slate-950 px-5 py-20 text-white md:py-24">
+      <section className="bg-[#0b74de] px-5 py-20 text-white md:py-24">
         <div className="mx-auto max-w-6xl">
           <SectionTitle
             eyebrow="Benefits"
@@ -468,10 +492,10 @@ export default function Home() {
             {benefits.map((item) => (
               <article
                 key={item.title}
-                className="rounded-3xl border border-white/10 bg-white/10 p-6"
+                className="rounded-lg border border-white/20 bg-white/10 p-6"
               >
-                <h3 className="font-bold text-blue-200">{item.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-slate-300">
+                <h3 className="font-bold text-white">{item.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-blue-50">
                   {item.description}
                 </p>
               </article>
@@ -480,12 +504,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-b from-white to-blue-50 px-5 py-20 md:py-24">
+      <section className="bg-white px-5 py-20 md:py-24">
         <div className="mx-auto max-w-6xl">
           <SectionTitle
             eyebrow="Use Cases"
             title="幅広いシーンで活用できます"
-            description="NotePMのように活用シーンを一覧化し、TOACHで使える場面がひと目で分かるように整理しました。"
+            description="新人教育から社内マニュアル、点検・承認業務まで、TOACHで使える場面をひと目で分かるように整理しました。"
             center
           />
 
@@ -493,9 +517,9 @@ export default function Home() {
             {useCases.map((item, index) => (
               <article
                 key={item}
-                className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+                className="note-card p-5"
               >
-                <div className="relative mb-4 h-24 overflow-hidden rounded-2xl bg-gradient-to-br from-white to-sky-50">
+                <div className="relative mb-4 h-24 overflow-hidden rounded-lg bg-[#f1f8ff]">
                   <Image
                     src={useCaseVisuals[index].src}
                     alt={useCaseVisuals[index].alt}
@@ -512,7 +536,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white px-5 py-20 md:py-24">
+      <section className="bg-[#f7fbff] px-5 py-20 md:py-24">
         <div className="mx-auto max-w-6xl">
           <SectionTitle
             eyebrow="Flow"
@@ -524,9 +548,9 @@ export default function Home() {
             {flowSteps.slice(0, 4).map((step) => (
               <article
                 key={step.step}
-                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+                className="note-card p-6"
               >
-                <p className="font-bold text-blue-700">STEP {step.step}</p>
+                <p className="font-bold text-[#0b74de]">STEP {step.step}</p>
                 <h3 className="mt-3 text-lg font-bold text-slate-950">
                   {step.title}
                 </h3>

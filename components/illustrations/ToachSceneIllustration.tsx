@@ -79,7 +79,7 @@ export default function ToachSceneIllustration({
 
   return (
     <figure
-      className={`relative flex min-h-[160px] items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-white via-sky-50 to-blue-50 p-4 ${className}`}
+      className={`relative flex min-h-[160px] items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-white via-sky-50 to-[#fff4c7] p-4 ${className}`}
     >
       <div className="relative h-full min-h-[132px] w-full">
         <Image
