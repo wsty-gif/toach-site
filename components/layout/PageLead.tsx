@@ -108,7 +108,7 @@ export default function PageLead({
             <div className="section-blue flex min-h-[260px] items-center justify-center p-5 md:p-7">
               <div className="relative h-[250px] w-full">
                 <Image
-                  src="/images/character-guide.png"
+                  src="/images/character-cutout.png"
                   alt="TOACHの案内キャラクター"
                   fill
                   sizes="(min-width: 1024px) 320px, 90vw"

@@ -305,7 +305,7 @@ export default function Home() {
               <div className="section-blue flex min-h-[280px] items-center justify-center p-5 md:p-8">
                 <div className="relative h-[260px] w-full">
                   <Image
-                    src="/images/character-guide.png"
+                    src="/images/character-cutout.png"
                     alt="TOACHの案内キャラクター"
                     fill
                     sizes="(min-width: 1024px) 360px, 90vw"
