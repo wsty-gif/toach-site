@@ -24,8 +24,8 @@ export default function PricingFeatureMatrix() {
             プラン別の機能比較
           </h2>
           <p className="mt-6 leading-9 text-slate-600">
-            manual-appにあるマニュアル管理、タスク配信、承認、ラーニング、ユーザー管理などをもとに、
-            プランごとの利用範囲を整理しています。
+            マニュアル管理、タスク配信、承認、ラーニング、ユーザー管理を中心に、
+            プランごとの違いを見やすくまとめています。
           </p>
         </div>
 

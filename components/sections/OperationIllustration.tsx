@@ -23,8 +23,8 @@ const outcomes = [
     description: "手順をマニュアル化",
   },
   {
-    title: "見える化",
-    description: "タスクと承認で追跡",
+    title: "把握しやすさ",
+    description: "タスクと承認の流れを見やすく",
   },
   {
     title: "定着化",
@@ -41,7 +41,7 @@ export default function OperationIllustration({ compact = false }: OperationIllu
             Operation
           </p>
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-5xl">
-            ムリ・ムダ・ムラが出やすい現場運用を、見える形に整理します。
+            ムリ・ムダ・ムラが出やすい現場運用を、把握しやすい形に整えます。
           </h2>
           <p className="mt-6 leading-9 text-slate-600">
             TOACHは、マニュアル、タスク、承認、教育をつなげることで、
