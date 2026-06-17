@@ -76,7 +76,7 @@ export default function ServicePage() {
       <PageLead
         eyebrow="Service"
         title="サービス紹介"
-        description="TOACHは、マニュアル、タスク、承認、教育をひとつの流れで扱えるクラウドサービスです。"
+        description="TOACHは、マニュアル、タスク、承認、教育をひとつの流れで管理できるクラウドサービスです。"
         illustration="service"
       />
 
@@ -98,9 +98,9 @@ export default function ServicePage() {
             </h2>
 
             <p className="mt-6 leading-9 text-slate-600">
-              マニュアルを作って終わり、業務指示を出して終わりにはしません。
-              TOACHは、誰が見たか、誰が実施したか、どこで止まっているかを追えるようにします。
-              現場の教育と実務をつなげて、確認にかかる手間を減らします。
+              マニュアルを作って終わり、業務指示を出して終わりではありません。
+              TOACHは、誰が確認し、誰が実施し、どこで承認が止まっているかまで見える化します。
+              現場の教育と業務実施をつなげ、確認業務の負担を減らします。
             </p>
           </div>
 
@@ -155,7 +155,7 @@ export default function ServicePage() {
             </h2>
 
             <p className="mt-6 leading-9 text-slate-600">
-              多店舗・多拠点の周知、教育、確認業務など、情報を渡したあとに実施確認が必要な場面で使いやすいです。
+              多店舗・多拠点の周知、教育、確認業務など、情報共有と実施確認が必要な現場で活用できます。
             </p>
           </div>
 
@@ -191,7 +191,7 @@ export default function ServicePage() {
 
       <CtaSection
         title="自社の運用に合うか、まずは相談できます。"
-        description="現状のマニュアル管理、教育、タスク運用を聞きながら、TOACHで整えられるところを一緒に見ます。"
+        description="現状のマニュアル管理、教育、タスク運用を伺いながら、TOACHでどこを整えられるかをご案内します。"
       />
 
       <Footer />

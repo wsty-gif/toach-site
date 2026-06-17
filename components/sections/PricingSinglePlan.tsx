@@ -67,8 +67,8 @@ export default function PricingSinglePlan() {
               </div>
 
               <p className="mt-8 rounded-2xl bg-blue-50 p-4 text-sm leading-7 text-blue-900">
-                ※導入時に必要な支援がある場合は、内容を確認したうえで個別にお伝えします。
-                まずは今の運用を気軽にお聞かせください。
+                ※料金は、利用人数・部署数・導入支援の範囲により変動します。
+                詳細はお問い合わせ後にご案内します。
               </p>
             </div>
           </article>

@@ -52,7 +52,7 @@ export default function FlowPage() {
       <PageLead
         eyebrow="Flow"
         title="ご利用の流れ"
-        description="初めての方でも進めやすいように、導入前の相談から運用開始後までの流れをまとめました。"
+        description="初めての方でも安心して進められるよう、導入前の相談から運用開始後までサポートします。"
         illustration="flow"
       />
 
@@ -70,8 +70,8 @@ export default function FlowPage() {
             </h2>
 
             <p className="mt-6 leading-9 text-slate-600">
-              お問い合わせ後は、今の運用状況を聞きながら、TOACHでどう変えられるかを一緒に見ます。
-              導入を決めていない段階でも大丈夫です。
+              お問い合わせ後、現在の運用状況を伺いながら、TOACHでどのように整えられるかをご案内します。
+              導入を決めていない段階でもご相談いただけます。
             </p>
           </div>
 
@@ -108,7 +108,7 @@ export default function FlowPage() {
 
       <CtaSection
         title="まずは無料相談から始められます。"
-        description="導入するか決まっていなくても大丈夫です。今の管理方法を整理するだけでも、改善のヒントが見つかります。"
+        description="導入するか決まっていなくても問題ありません。今の管理方法を整理するだけでも、改善のヒントが見つかります。"
       />
 
       <Footer />
