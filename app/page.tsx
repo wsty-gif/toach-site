@@ -257,42 +257,46 @@ export default function Home() {
     <main>
       <Navbar />
 
-      <section className="section-soft px-5 py-14 md:py-24">
-        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1fr_1.05fr] lg:items-center">
+      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f1f8ff_0%,#ffffff_64%,#fff8dc_100%)] px-5 pb-14 pt-12 md:pb-20 md:pt-18">
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-[linear-gradient(180deg,rgba(255,255,255,0),#ffffff)]" aria-hidden="true" />
+        <div className="relative mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.98fr_1.02fr] lg:items-center">
           <div>
-            <p className="section-marker text-sm">{siteConfig.tagline}</p>
-
-            <h1 className="mt-4 max-w-2xl text-4xl font-bold leading-tight tracking-tight text-slate-950 md:text-6xl">
-              現場のやることを、
-              <br />
-              やさしく伝える。
-            </h1>
-
-            <p className="mt-6 max-w-2xl text-base leading-9 text-slate-600 md:text-lg">
-              TOACHは、マニュアル、タスク、承認、教育をひとつにまとめて、
-              現場の運用を見やすく、伝わりやすく整えるクラウドサービスです。
+            <p className="eyebrow-pill text-sm font-bold">
+              {siteConfig.tagline}
             </p>
 
-            <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap">
+            <h1 className="mt-7 max-w-2xl text-[2.55rem] font-bold leading-tight tracking-tight text-slate-950 sm:text-5xl md:text-6xl">
+              現場のやること、
+              <br />
+              すぐ伝わる。
+            </h1>
+
+            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-700 md:text-lg md:leading-9">
+              TOACHは、マニュアル・タスク・承認・教育をひとつにまとめる
+              現場運用プラットフォームです。探す、伝える、確認する手間を減らし、
+              業務の標準化から定着までを支えます。
+            </p>
+
+            <div className="mt-9 grid gap-3 sm:flex sm:flex-wrap">
               <Link
                 href={primaryCta.href}
-                className="inline-flex justify-center rounded-full bg-[#0072ce] px-6 py-3.5 text-center font-bold text-white transition hover:bg-[#004f9f]"
+                className="rounded-full bg-[#0b74de] px-7 py-4 text-center font-bold text-white shadow-xl shadow-blue-700/20 transition hover:bg-[#074c9f]"
               >
                 {primaryCta.label}
               </Link>
               <Link
                 href={secondaryCta.href}
-                className="inline-flex justify-center rounded-full border border-blue-200 bg-white px-6 py-3.5 text-center font-bold text-[#0072ce] transition hover:bg-blue-50"
+                className="rounded-full border border-blue-200 bg-white px-7 py-4 text-center font-bold text-[#0b74de] transition hover:bg-blue-50"
               >
                 {secondaryCta.label}
               </Link>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-3 text-sm">
-              {["マニュアル", "タスク", "教育"].map((item) => (
+            <div className="mt-10 grid max-w-xl grid-cols-3 gap-3 text-sm">
+              {["マニュアル", "タスク", "ラーニング"].map((item) => (
                 <div
                   key={item}
-                  className="note-card px-4 py-3 font-bold text-slate-700"
+                  className="note-card px-4 py-3 text-center font-bold text-slate-700"
                 >
                   {item}
                 </div>
@@ -300,44 +304,55 @@ export default function Home() {
             </div>
           </div>
 
-          <article className="note-card overflow-hidden">
-            <div className="grid md:grid-cols-[0.95fr_1.05fr]">
-              <div className="section-blue flex min-h-[280px] items-center justify-center p-5 md:p-8">
-                <div className="relative h-[260px] w-full">
-                  <Image
-                    src="/images/character-cutout.png"
-                    alt="TOACHの案内キャラクター"
-                    fill
-                    sizes="(min-width: 1024px) 360px, 90vw"
-                    className="object-contain"
-                    priority
-                  />
+          <div className="relative">
+            <div className="note-card relative overflow-hidden p-4 md:p-5">
+              <div className="rounded-lg border border-blue-100 bg-white">
+                <div className="flex items-center justify-between border-b border-blue-100 px-4 py-3">
+                  <p className="text-sm font-bold text-[#0b74de]">TOACH Workspace</p>
+                  <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700">
+                    運用中
+                  </span>
                 </div>
-              </div>
-
-              <div className="flex flex-col justify-center bg-white p-6 md:p-8">
-                <p className="section-marker text-sm">キャラクター案内</p>
-                <p className="mt-4 text-3xl font-bold tracking-tight text-[#0072ce]">
-                  わからないを、わかるに変えるお手伝いをします。
-                </p>
-                <p className="mt-5 text-base leading-9 text-slate-700">
-                  何から見ればよいか迷いやすいポイントを、やさしく順番に整理していきます。
-                  このあとに続くページも、同じ案内役のトーンでご覧いただけます。
-                </p>
-
-                <div className="mt-6 grid gap-3">
-                  {["まずは全体像", "次に使い方", "最後に料金と流れ"].map((item) => (
-                    <div
-                      key={item}
-                      className="rounded-lg bg-[#f7fbff] px-4 py-3 text-sm font-bold text-slate-700"
-                    >
-                      {item}
+                <div className="grid gap-4 p-4 md:grid-cols-[1fr_170px]">
+                  <div className="grid gap-3">
+                    {[
+                      ["新人研修マニュアル", "確認 92%"],
+                      ["月次点検タスク", "完了 34/40"],
+                      ["承認待ちレポート", "7件"],
+                    ].map(([item, status]) => (
+                      <div
+                        key={item}
+                        className="flex items-center justify-between rounded-lg border border-slate-100 bg-slate-50 px-4 py-3"
+                      >
+                        <span className="font-bold text-slate-800">{item}</span>
+                        <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-[#0b74de]">
+                          {status}
+                        </span>
+                      </div>
+                    ))}
+                    <div className="rounded-lg bg-[#0b74de] p-5 text-white">
+                      <p className="text-sm text-blue-100">今月の確認状況</p>
+                      <p className="mt-2 text-4xl font-bold">87%</p>
                     </div>
-                  ))}
+                  </div>
+                  <div className="relative min-h-[220px] rounded-lg bg-[#fff4c7]">
+                    <Image
+                      src="https://cdn.undraw.co/illustrations/teamwork_8val.svg"
+                      alt="チームで業務を進めるイラスト"
+                      fill
+                      sizes="(min-width: 1024px) 170px, 80vw"
+                      className="object-contain p-4"
+                      unoptimized
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </article>
+            <div className="note-card absolute -bottom-6 left-5 hidden w-52 p-4 md:block">
+              <p className="text-xs font-bold text-slate-500">本日の対応漏れ</p>
+              <p className="mt-1 text-2xl font-bold text-[#19b37a]">0件</p>
+            </div>
+          </div>
         </div>
       </section>
 

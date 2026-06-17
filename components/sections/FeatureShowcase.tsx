@@ -9,10 +9,10 @@ export default function FeatureShowcase() {
     <section className="bg-white px-4 py-14 sm:px-5 sm:py-16 md:py-24">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-3xl">
-          <p className="section-marker text-xs sm:text-sm">
+          <p className="eyebrow-pill text-xs font-bold uppercase tracking-[0.16em] sm:text-sm sm:tracking-[0.2em]">
             Screens
           </p>
-          <h2 className="mt-4 text-2xl font-bold leading-tight tracking-tight text-slate-950 sm:text-3xl md:text-5xl">
+          <h2 className="mt-4 text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl md:text-5xl">
             実際の画面で、使い方をイメージできます。
           </h2>
           <p className="mt-6 leading-9 text-slate-600">
@@ -82,8 +82,8 @@ function FeatureImagePanel({ feature }: { feature: FeatureShowcaseItem }) {
   }
 
   return (
-    <div className="note-card overflow-hidden p-2 sm:p-3">
-      <div className="group relative aspect-[1348/630] overflow-hidden rounded-lg bg-white">
+    <div className="soft-panel overflow-hidden rounded-2xl bg-white p-2 sm:rounded-3xl sm:p-3">
+      <div className="group relative aspect-[1348/630] overflow-hidden rounded-2xl bg-white">
         <Image
           src={images[currentImageIndex]}
           alt={`${feature.alt} ${currentImageIndex + 1}`}

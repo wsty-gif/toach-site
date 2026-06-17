@@ -33,13 +33,13 @@ const productFlow = [
 
 export default function ProductFlowIllustration() {
   return (
-    <section className="section-soft px-5 py-20 md:py-24">
+    <section className="bg-gradient-to-b from-slate-50 to-white px-5 py-20 md:py-24">
       <div className="mx-auto max-w-6xl">
         <div className="text-center">
-          <p className="section-marker mx-auto text-sm">
+          <p className="eyebrow-pill mx-auto text-sm font-bold uppercase tracking-[0.2em]">
             Product Flow
           </p>
-          <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-slate-950 md:text-5xl">
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-5xl">
             TOACHでできることを、流れで見る。
           </h2>
           <p className="mx-auto mt-6 max-w-3xl leading-9 text-slate-600">
@@ -51,15 +51,15 @@ export default function ProductFlowIllustration() {
           {productFlow.map((item, index) => (
             <article
               key={item.title}
-              className="relative note-card p-7"
+              className="relative rounded-3xl border border-slate-200 bg-white p-7 shadow-sm"
             >
               <div className="flex items-start gap-4">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-[#f7fbff] text-sm font-bold text-[#0072ce]">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-sm font-bold text-blue-700">
                   {item.icon}
                 </div>
 
                 <div>
-                  <p className="text-xs font-bold text-[#0072ce]">
+                  <p className="text-xs font-bold text-blue-700">
                     {String(index + 1).padStart(2, "0")}
                   </p>
                   <h3 className="mt-1 text-xl font-bold text-slate-950">
@@ -72,7 +72,7 @@ export default function ProductFlowIllustration() {
               </div>
 
               {index < productFlow.length - 1 ? (
-                <div className="absolute -right-3 top-1/2 z-10 hidden h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-[#0072ce] text-white lg:flex">
+                <div className="absolute -right-3 top-1/2 z-10 hidden h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-blue-700 text-white lg:flex">
                   →
                 </div>
               ) : null}

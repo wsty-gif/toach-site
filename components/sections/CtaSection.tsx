@@ -11,25 +11,24 @@ export default function CtaSection({
   description = "導入を決めていない段階でも大丈夫です。現在の課題を伺いながら、無理のない進め方をご提案します。",
 }: CtaSectionProps) {
   return (
-    <section className="section-soft px-4 py-14 sm:px-5 sm:py-16 md:py-24">
-      <div className="mx-auto max-w-5xl note-card px-6 py-12 text-center sm:px-10 md:py-16">
-        <p className="section-marker mx-auto text-sm">Contact</p>
-        <h2 className="mt-4 text-2xl font-bold leading-tight tracking-tight text-slate-950 sm:text-3xl md:text-5xl">
+    <section className="px-4 py-14 text-white sm:px-5 sm:py-16 md:py-24">
+      <div className="mx-auto max-w-5xl overflow-hidden rounded-lg bg-[#0b74de] px-6 py-12 text-center shadow-2xl shadow-blue-900/20 sm:px-10 md:py-16">
+        <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-5xl">
           {title}
         </h2>
-        <p className="mt-6 leading-8 text-slate-600">{description}</p>
+        <p className="mt-6 leading-8 text-blue-100">{description}</p>
 
         <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap sm:justify-center sm:gap-4">
           <Link
             href={primaryCta.href}
-            className="inline-flex justify-center rounded-full bg-[#0072ce] px-5 py-3.5 text-center font-bold text-white transition hover:bg-[#004f9f] sm:px-7 sm:py-4"
+            className="inline-flex justify-center rounded-full bg-white px-5 py-3.5 text-center font-bold text-blue-700 transition hover:bg-blue-50 sm:px-7 sm:py-4"
           >
             {primaryCta.label}
           </Link>
 
           <Link
             href={secondaryCta.href}
-            className="inline-flex justify-center rounded-full border border-blue-200 px-5 py-3.5 text-center font-bold text-[#0072ce] transition hover:bg-blue-50 sm:px-7 sm:py-4"
+            className="inline-flex justify-center rounded-full border border-white/40 px-5 py-3.5 text-center font-bold text-white transition hover:bg-white/10 sm:px-7 sm:py-4"
           >
             {secondaryCta.label}
           </Link>

@@ -194,7 +194,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="note-card p-6 md:p-8">
+    <form onSubmit={handleSubmit} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
       <div className="grid gap-6">
         <div>
           <label className="block text-sm font-bold text-slate-950">
@@ -204,7 +204,7 @@ export default function ContactForm() {
             value={form.inquiryType}
             onChange={(event) => updateField("inquiryType", event.target.value)}
             required
-            className="mt-2 w-full rounded-lg border border-slate-200 px-4 py-3 focus:border-[#0072ce] focus:outline-none"
+            className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3"
           >
             <option value="導入相談を申し込む">導入相談を申し込む</option>
             <option value="サービス資料を請求する">サービス資料を請求する</option>
@@ -305,7 +305,7 @@ export default function ContactForm() {
             value={form.message}
             onChange={(event) => updateField("message", event.target.value)}
             rows={6}
-            className="mt-2 w-full rounded-lg border border-slate-200 px-4 py-3 focus:border-[#0072ce] focus:outline-none"
+            className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3"
             placeholder="現在のお悩み、導入時期、確認したいことなどをご記入ください。"
           />
         </div>
@@ -346,7 +346,7 @@ export default function ContactForm() {
 
         {resultMessage ? (
           <div
-            className={`rounded-lg p-4 text-sm font-bold ${
+            className={`rounded-2xl p-4 text-sm font-bold ${
               isSuccess
                 ? "bg-green-50 text-green-700"
                 : "bg-red-50 text-red-700"
@@ -359,7 +359,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="rounded-full bg-[#0072ce] px-8 py-4 font-bold text-white transition hover:bg-[#004f9f] disabled:cursor-not-allowed disabled:opacity-60"
+          className="rounded-full bg-blue-700 px-8 py-4 font-bold text-white transition hover:bg-blue-800 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {isSubmitting ? "送信中..." : "入力内容を送信する"}
         </button>
@@ -393,7 +393,7 @@ function TextField({
         value={value}
         onChange={(event) => onChange(event.target.value)}
         required={required}
-        className="mt-2 w-full rounded-lg border border-slate-200 px-4 py-3 focus:border-[#0072ce] focus:outline-none"
+        className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3"
       />
     </div>
   );

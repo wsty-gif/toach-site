@@ -86,14 +86,14 @@ export default function ServicePage() {
 
       <ProductFlowIllustration />
 
-      <section className="section-soft px-5 py-20 md:py-24">
+      <section className="px-5 py-20 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <p className="section-marker text-sm">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
               Overview
             </p>
 
-            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-slate-950 md:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-5xl">
               現場で使われるところまで支えるサービスです。
             </h2>
 
@@ -108,9 +108,9 @@ export default function ServicePage() {
             {serviceItems.map((item, index) => (
               <article
                 key={item.title}
-                className="note-card grid gap-6 overflow-hidden p-5 sm:grid-cols-[180px_1fr] sm:items-center"
+                className="grid gap-6 overflow-hidden rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:grid-cols-[180px_1fr] sm:items-center"
               >
-                <div className="relative min-h-[150px] rounded-lg bg-[#f7fbff] p-4">
+                <div className="relative min-h-[150px] rounded-2xl bg-gradient-to-br from-sky-50 to-blue-50 p-4">
                   <Image
                     src={serviceItemVisuals[index].src}
                     alt={serviceItemVisuals[index].alt}
@@ -121,7 +121,7 @@ export default function ServicePage() {
                   />
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-[#0072ce]">
+                  <p className="text-sm font-bold text-blue-700">
                     SERVICE {String(index + 1).padStart(2, "0")}
                   </p>
                   <h3 className="mt-2 text-2xl font-bold text-slate-950">
@@ -143,14 +143,14 @@ export default function ServicePage() {
 
       <ImprovementCycle />
 
-      <section className="section-soft px-5 py-20 md:py-24">
+      <section className="px-5 py-20 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <p className="section-marker text-sm">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
               Use Cases
             </p>
 
-            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-slate-950 md:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-5xl">
               このような運用に向いています。
             </h2>
 
@@ -163,9 +163,9 @@ export default function ServicePage() {
             {serviceUseCases.map((item, index) => (
               <article
                 key={item.title}
-                className="note-card overflow-hidden"
+                className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
               >
-                <div className="relative h-44 bg-[#f7fbff]">
+                <div className="relative h-44 bg-gradient-to-br from-white to-sky-50">
                   <Image
                     src={serviceUseCaseVisuals[index].src}
                     alt={serviceUseCaseVisuals[index].alt}

@@ -2,14 +2,14 @@ import { serviceItems, serviceUseCases } from "@/lib/siteContent";
 
 export default function FeatureDetailGrid() {
   return (
-    <section className="section-soft px-4 py-14 sm:px-5 sm:py-16 md:py-24">
+    <section className="bg-slate-50 px-4 py-14 sm:px-5 sm:py-16 md:py-24">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
           <div>
-            <p className="section-marker text-xs sm:text-sm">
+            <p className="eyebrow-pill text-xs font-bold uppercase tracking-[0.16em] sm:text-sm sm:tracking-[0.2em]">
               Features
             </p>
-            <h2 className="mt-4 text-2xl font-bold leading-tight tracking-tight text-slate-950 sm:text-3xl md:text-5xl">
+            <h2 className="mt-4 text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl md:text-5xl">
               現場運用に必要な機能を、まとめて管理。
             </h2>
             <p className="mt-6 leading-9 text-slate-600">
@@ -22,7 +22,7 @@ export default function FeatureDetailGrid() {
             {serviceItems.map((item) => (
               <article
                 key={item.title}
-                className="note-card p-6"
+                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
               >
                 <h3 className="text-xl font-bold text-slate-950">{item.title}</h3>
                 <p className="mt-4 leading-8 text-slate-600">
@@ -40,7 +40,7 @@ export default function FeatureDetailGrid() {
 
           <div className="reveal-stagger mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {serviceUseCases.map((item) => (
-              <article key={item.title} className="note-card p-6">
+              <article key={item.title} className="rounded-2xl bg-white p-6 shadow-sm">
                 <h4 className="font-bold leading-8 text-slate-950">
                   {item.title}
                 </h4>

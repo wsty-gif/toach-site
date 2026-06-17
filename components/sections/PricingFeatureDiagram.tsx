@@ -2,13 +2,13 @@ import { pricingFeatureDiagramItems, pricingIncludedGroups } from "@/lib/siteCon
 
 export default function PricingFeatureDiagram() {
   return (
-    <section className="section-soft px-5 py-20 md:py-24">
+    <section className="bg-white px-5 py-20 md:py-24">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-3xl">
-          <p className="section-marker text-sm">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
             Features
           </p>
-          <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-slate-950 md:text-5xl">
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-5xl">
             1つのプランで、現場運用に必要な機能をまとめて利用できます。
           </h2>
           <p className="mt-6 leading-9 text-slate-600">
@@ -17,12 +17,12 @@ export default function PricingFeatureDiagram() {
           </p>
         </div>
 
-        <div className="mt-14 note-card p-6 md:p-8">
+        <div className="mt-14 rounded-3xl border border-slate-200 bg-slate-50 p-6 md:p-8">
           <div className="grid gap-5 lg:grid-cols-3">
             {pricingFeatureDiagramItems.map((item) => (
               <article
                 key={item.title}
-                className="note-card p-6"
+                className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"
               >
                 <div
                   className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl text-sm font-black text-white ${item.colorClass}`}
@@ -44,7 +44,10 @@ export default function PricingFeatureDiagram() {
 
                 <div className="mt-5 flex flex-wrap gap-2">
                   {item.points.map((point) => (
-                  <span key={point} className="rounded-full bg-[#f7fbff] px-3 py-1 text-xs font-bold text-slate-600">
+                    <span
+                      key={point}
+                      className="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-slate-600"
+                    >
                       {point}
                     </span>
                   ))}
@@ -66,7 +69,10 @@ export default function PricingFeatureDiagram() {
 
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {pricingIncludedGroups.map((group) => (
-              <article key={group.title} className="note-card p-6">
+              <article
+                key={group.title}
+                className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"
+              >
                 <h3 className="text-xl font-bold text-slate-950">
                   {group.title}
                 </h3>

@@ -55,16 +55,16 @@ export default function PricingPage() {
         illustration="pricing"
       />
 
-      <section className="section-soft px-5 pb-10">
+      <section className="bg-white px-5 pb-10">
         <div className="mx-auto max-w-6xl">
-          <div className="note-card bg-[#f7fbff] p-6 md:p-8">
+          <div className="rounded-3xl border border-blue-100 bg-blue-50 p-6 md:p-8">
             <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
               <div>
-                <p className="section-marker text-sm">
+                <p className="text-sm font-bold text-blue-700">
                   プランは1つ。必要な機能をまとめて提供します。
                 </p>
 
-                <h2 className="mt-3 text-2xl font-bold leading-tight text-slate-950">
+                <h2 className="mt-3 text-2xl font-bold text-slate-950">
                   利用人数による料金変動はありません。
                 </h2>
 
@@ -76,7 +76,7 @@ export default function PricingPage() {
 
               <Link
                 href="/contact?type=pricing"
-                className="inline-flex justify-center rounded-full bg-[#0072ce] px-7 py-4 font-bold text-white transition hover:bg-[#004f9f]"
+                className="inline-flex justify-center rounded-full bg-blue-700 px-7 py-4 font-bold text-white transition hover:bg-blue-800"
               >
                 料金を相談する
               </Link>
@@ -91,25 +91,25 @@ export default function PricingPage() {
 
       <PricingFeatureDiagram />
 
-      <section className="section-soft px-5 py-20 md:py-24">
+      <section className="bg-slate-950 px-5 py-20 text-white md:py-24">
         <div className="mx-auto max-w-6xl">
-          <p className="section-marker text-sm">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-300">
             Price Image
           </p>
 
-          <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-slate-950 md:text-5xl">
+          <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-5xl">
             料金は、基本プランをもとに個別にご案内します。
           </h2>
 
-          <p className="mt-6 max-w-3xl leading-9 text-slate-600">
+          <p className="mt-6 max-w-3xl leading-9 text-slate-300">
             現時点ではオプションメニューを細かく分けず、基本プランの中で必要な機能をまとめてご案内します。
             利用人数が増えても、人数を理由に月額費用が変わることはありません。
           </p>
 
           <div className="reveal-stagger mt-12 grid gap-6 md:grid-cols-3">
             {priceImageCards.map((card) => (
-              <article key={card.title} className="note-card p-5">
-                <div className="relative h-36 rounded-lg bg-[#f7fbff]">
+              <article key={card.title} className="rounded-3xl bg-white/10 p-5">
+                <div className="relative h-36 rounded-2xl bg-white">
                   <Image
                     src={card.src}
                     alt={card.alt}
@@ -119,11 +119,11 @@ export default function PricingPage() {
                     unoptimized
                   />
                 </div>
-                <p className="mt-5 text-sm font-bold text-[#0072ce]">
+                <p className="mt-5 text-sm font-bold text-blue-200">
                   {card.number}
                 </p>
                 <h3 className="mt-3 text-xl font-bold">{card.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-slate-600">
+                <p className="mt-4 text-sm leading-7 text-slate-300">
                   {card.description}
                 </p>
               </article>

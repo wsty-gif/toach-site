@@ -58,14 +58,14 @@ export default function FlowPage() {
 
       <ProductFlowIllustration />
 
-      <section className="section-soft px-5 py-20 md:py-24">
+      <section className="px-5 py-20 md:py-24">
         <div className="mx-auto max-w-5xl">
           <div className="max-w-3xl">
-            <p className="section-marker text-sm">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
               Steps
             </p>
 
-            <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-slate-950 md:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 md:text-5xl">
               導入までの流れ
             </h2>
 
@@ -79,9 +79,9 @@ export default function FlowPage() {
             {flowSteps.map((step, index) => (
               <article
                 key={step.step}
-                className="note-card grid gap-6 p-5 sm:grid-cols-[180px_1fr] sm:items-center"
+                className="grid gap-6 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:grid-cols-[180px_1fr] sm:items-center"
               >
-                <div className="relative min-h-[140px] rounded-lg bg-[#f7fbff]">
+                <div className="relative min-h-[140px] rounded-2xl bg-gradient-to-br from-white to-sky-50">
                   <Image
                     src={flowVisuals[index].src}
                     alt={flowVisuals[index].alt}
@@ -92,7 +92,7 @@ export default function FlowPage() {
                   />
                 </div>
                 <div>
-                  <p className="font-bold text-[#0072ce]">STEP {step.step}</p>
+                  <p className="font-bold text-blue-700">STEP {step.step}</p>
                   <h3 className="mt-3 text-2xl font-bold text-slate-950">
                     {step.title}
                   </h3>
