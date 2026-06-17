@@ -12,8 +12,8 @@ export default function PricingFeatureDiagram() {
             1つのプランで、現場運用に必要な機能をまとめて利用できます。
           </h2>
           <p className="mt-6 leading-9 text-slate-600">
-            TOACHでできることを、機能の流れに沿って並べています。
-            マニュアル作成から、タスク配信、承認、ラーニング、共有、履歴確認までをひと続きで扱えます。
+            manual-appの機能をもとに、TOACHでできることを図で整理しています。
+            マニュアル作成から、タスク配信、承認、ラーニング、共有、履歴確認まで一連の流れで管理できます。
           </p>
         </div>
 
